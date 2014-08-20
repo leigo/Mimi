@@ -1,8 +1,48 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <style name="ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@drawable/ab_transparent_light_holo</item>
+        <item name="android:titleTextStyle">@style/ActionBarTitleTextStyle</item>
+        <item name="android:indeterminateProgressStyle">@style/ActionBarProgress</item>
+    </style>
+
+    <style name="ActionButton" parent="@android:style/Widget.Holo.Light.ActionButton">
+        <item name="android:paddingLeft">8.0dip</item>
+        <item name="android:paddingRight">8.0dip</item>
+        <item name="android:minWidth">45.0dip</item>
+    </style>
+
+    <style name="ActionBarProgress" parent="@android:style/Widget.Holo.Light.ProgressBar">
+        <item name="android:maxWidth">40.0dip</item>
+        <item name="android:maxHeight">30.0dip</item>
+        <item name="android:indeterminateDrawable">@drawable/progress_medium_holo</item>
+        <item name="android:minWidth">40.0dip</item>
+        <item name="android:minHeight">30.0dip</item>
+    </style>
+
+    <style name="BaseTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimation</item>
+        <item name="android:actionBarStyle">@style/ActionBar</item>
+        <item name="android:actionButtonStyle">@style/ActionButton</item>
+        <item name="android:listChoiceBackgroundIndicator">@drawable/item_background_holo_light
+        </item>
+        <item name="android:actionBarItemBackground">@drawable/item_background_holo_light</item>
+    </style>
+
+    <style name="WindowAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/zoom_out_center</item>
+        <item name="android:activityCloseEnterAnimation">@anim/zoom_in_center</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+        <item name="android:taskOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:taskOpenExitAnimation">@anim/zoom_out_center</item>
+        <item name="android:taskCloseEnterAnimation">@anim/zoom_in_center</item>
+        <item name="android:taskCloseExitAnimation">@anim/slide_out_right</item>
+    </style>
+
+    <style name="ActionBarTitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/action_bar_title</item>
     </style>
 
 </resources>
