@@ -13,9 +13,6 @@
     <attr name="footerHintLoading" format="reference|string" />
     <attr name="xlist_view_hint_text" format="color" />
     <attr name="xlist_view_header_arrow" format="reference" />
-    <attr name="vpiIconPageIndicatorStyle" format="reference" />
-    <attr name="vpiTabPageIndicatorStyle" format="reference" />
-    <attr name="vpiIconPageIndicatorIconPadding" format="dimension" />
     <attr name="overlay_size" format="dimension" />
     <attr name="column_count" format="integer" />
     <attr name="column_count_portrait" format="integer" />

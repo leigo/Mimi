@@ -17,6 +17,7 @@
 package com.viewpagerindicator;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
@@ -26,6 +27,8 @@ import android.view.View;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 
+import com.leigo.android.mimi.R;
+
 import static android.view.ViewGroup.LayoutParams.FILL_PARENT;
 import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 
@@ -34,6 +37,7 @@ import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
  * across different configurations or circumstances.
  */
 public class IconPageIndicator extends HorizontalScrollView implements PageIndicator {
+    private int iconPadding;
     private final IcsLinearLayout mIconsLayout;
 
     private ViewPager mViewPager;
@@ -47,6 +51,9 @@ public class IconPageIndicator extends HorizontalScrollView implements PageIndic
 
     public IconPageIndicator(Context context, AttributeSet attrs) {
         super(context, attrs);
+        TypedArray localTypedArray = context.obtainStyledAttributes(attrs, R.styleable.ViewPagerIndicator);
+        this.iconPadding = localTypedArray.getDimensionPixelSize(R.styleable.ViewPagerIndicator_vpiIconPageIndicatorIconPadding, 0);
+        localTypedArray.recycle();
         setHorizontalScrollBarEnabled(false);
 
         mIconsLayout = new IcsLinearLayout(context, R.attr.vpiIconPageIndicatorStyle);
@@ -131,6 +138,7 @@ public class IconPageIndicator extends HorizontalScrollView implements PageIndic
         for (int i = 0; i < count; i++) {
             ImageView view = new ImageView(getContext(), null, R.attr.vpiIconPageIndicatorStyle);
             view.setImageResource(iconAdapter.getIconResId(i));
+            view.setPadding(iconPadding, 0, iconPadding, 0);
             mIconsLayout.addView(view);
         }
         if (mSelectedIndex > count) {
