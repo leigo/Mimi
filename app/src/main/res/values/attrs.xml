@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="headerOffset" format="integer" />
+    <attr name="footerOffset" format="integer" />
+    <attr name="hintTextColor" format="color" />
+    <attr name="displayUpdateTime" format="boolean" />
+    <attr name="showFooterArrow" format="boolean" />
+    <attr name="headerHintNormal" format="reference|string" />
+    <attr name="headerHintReady" format="reference|string" />
+    <attr name="headerHintLoading" format="reference|string" />
+    <attr name="footerHintNormal" format="reference|string" />
+    <attr name="footerHintReady" format="reference|string" />
+    <attr name="footerHintLoading" format="reference|string" />
+    <attr name="xlist_view_hint_text" format="color" />
+    <attr name="xlist_view_header_arrow" format="reference" />
+    <attr name="vpiIconPageIndicatorStyle" format="reference" />
+    <attr name="vpiTabPageIndicatorStyle" format="reference" />
+    <attr name="vpiIconPageIndicatorIconPadding" format="dimension" />
+    <attr name="overlay_size" format="dimension" />
+    <attr name="column_count" format="integer" />
+    <attr name="column_count_portrait" format="integer" />
+    <attr name="column_count_landscape" format="integer" />
+    <attr name="item_margin" format="dimension" />
+    <attr name="grid_paddingLeft" format="dimension" />
+    <attr name="grid_paddingRight" format="dimension" />
+    <attr name="grid_paddingTop" format="dimension" />
+    <attr name="grid_paddingBottom" format="dimension" />
+</resources>
