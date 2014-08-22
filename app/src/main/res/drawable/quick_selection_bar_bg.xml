@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector android:exitFadeDuration="@android:integer/config_shortAnimTime" xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape>
+            <corners android:radius="5.0dip" />
+            <solid android:color="@color/quick_selection_bar_pressed" />
+        </shape>
+    </item>
+    <item android:drawable="@android:color/transparent" />
+</selector>

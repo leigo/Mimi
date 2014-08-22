@@ -13,7 +13,9 @@
     <attr name="footerHintLoading" format="reference|string" />
     <attr name="xlist_view_hint_text" format="color" />
     <attr name="xlist_view_header_arrow" format="reference" />
-    <attr name="overlay_size" format="dimension" />
+    <declare-styleable name="QuickSelectionBar">
+        <attr name="overlay_size" format="dimension" />
+    </declare-styleable>
     <attr name="column_count" format="integer" />
     <attr name="column_count_portrait" format="integer" />
     <attr name="column_count_landscape" format="integer" />

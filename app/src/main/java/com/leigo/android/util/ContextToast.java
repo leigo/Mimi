@@ -2,6 +2,7 @@ package com.leigo.android.util;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.widget.TextView;
@@ -41,7 +42,7 @@ public class ContextToast {
             TextView textView = new TextView(context);
             textView.setBackgroundResource(R.drawable.notice_dialog_bg);
             textView.setGravity(Gravity.CENTER_VERTICAL);
-            textView.setTextColor(context.getResources().getColor(android.R.color.white));
+            textView.setTextColor(Color.WHITE);
             textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16.0f);
             textView.setText(text);
             toast.setView(textView);

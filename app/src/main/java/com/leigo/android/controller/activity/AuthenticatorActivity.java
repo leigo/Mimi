@@ -14,11 +14,10 @@ import android.widget.Toast;
 
 import com.google.inject.Inject;
 import com.leigo.android.mimi.R;
+import com.leigo.android.model.domain.Country;
 import com.leigo.android.model.helper.HttpHelper;
 import com.leigo.android.util.ContextToast;
 import com.leigo.android.util.Utils;
-
-import org.w3c.dom.Text;
 
 import roboguice.inject.InjectView;
 
@@ -45,6 +44,8 @@ public class AuthenticatorActivity extends TrackedRoboActivity {
     @Inject
     private ContextToast contextToast;
 
+    private Country country;
+
     @InjectView(R.id.forgot_password)
     private TextView forgotPassword;
 
@@ -70,17 +71,26 @@ public class AuthenticatorActivity extends TrackedRoboActivity {
         context.startActivity(intent);
     }
 
+    private void updateRegionInfo(Country country) {
+        regionNameView.setText(country.getName());
+        regionCodeView.setText(country.getCode());
+    }
+
     public void clickOnButton(View v) {
         String str1 = phoneNumberView.getText().toString();
         String str2 = passwordView.getText().toString().trim();
-        if(TextUtils.isEmpty(str1)) {
+        if (TextUtils.isEmpty(str1)) {
             contextToast.show(R.string.toast_input_phone_number, Toast.LENGTH_SHORT);
             return;
         }
-        if(TextUtils.isEmpty(str2)) {
+        if (TextUtils.isEmpty(str2)) {
             contextToast.show(R.string.toast_input_password, Toast.LENGTH_SHORT);
             return;
         }
+    }
+
+    public void clickOnRegion(View paramView) {
+        RegionSelectionActivity.startFrom(this);
     }
 
     @Override
@@ -90,6 +100,11 @@ public class AuthenticatorActivity extends TrackedRoboActivity {
         getActionBar().setDisplayHomeAsUpEnabled(true);
         Bundle bundle = getIntent().getExtras();
         authenticatorType = bundle.getInt(EXTRA_AUTHENTICATOR_TYPE);
+        country = (Country) bundle.getParcelable("country");
+        if (country == null) {
+            country = Country.DEFAULT;
+        }
+        updateRegionInfo(country);
         switch (authenticatorType) {
             case TYPE_LOGIN:
                 getActionBar().setTitle(R.string.login_secret);

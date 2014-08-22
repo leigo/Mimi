@@ -53,6 +53,12 @@
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:configChanges="keyboardHidden|orientation"
+            android:label="@string/label_select_region"
+            android:name="com.leigo.android.controller.activity.RegionSelectionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:configChanges="keyboardHidden|orientation"
             android:launchMode="singleTop"
             android:name="com.leigo.android.controller.activity.AccountGuidanceActivity"
             android:screenOrientation="portrait"
