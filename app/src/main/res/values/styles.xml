@@ -30,6 +30,18 @@
         <item name="android:actionBarItemBackground">@drawable/item_background_holo_light</item>
     </style>
 
+    <style name="NoTitleBaseTheme" parent="@style/BaseTheme">
+        <item name="android:actionBarStyle">@style/NoTitleActionBar</item>
+    </style>
+
+    <style name="ProgressingDialog" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowBackground">@drawable/common_dialog_bg</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+    </style>
+
     <style name="WindowAnimation" parent="@android:style/Animation.Activity">
         <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
         <item name="android:activityOpenExitAnimation">@anim/zoom_out_center</item>
@@ -41,12 +53,21 @@
         <item name="android:taskCloseExitAnimation">@anim/slide_out_right</item>
     </style>
 
+    <style name="NoTitleActionBar" parent="@style/ActionBar">
+        <item name="android:displayOptions">useLogo|showHome</item>
+    </style>
+
     <style name="ActionBarTitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
         <item name="android:textColor">@color/action_bar_title</item>
     </style>
 
     <style name="NoActionBar" parent="@android:style/Theme.Holo.Light.NoActionBar">
         <item name="android:windowAnimationStyle">@style/WindowAnimation</item>
+    </style>
+
+    <style name="MainActivity" parent="@style/NoTitleBaseTheme">
+        <item name="xlist_view_hint_text">@color/xlist_view_hint_text</item>
+        <item name="xlist_view_header_arrow">@drawable/xlist_view_header_arrow</item>
     </style>
 
 </resources>

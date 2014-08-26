@@ -39,6 +39,7 @@
             android:configChanges="keyboardHidden|orientation"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
+            android:theme="@style/MainActivity"
             android:name="com.leigo.android.controller.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -66,6 +67,11 @@
         <activity
             android:configChanges="keyboardHidden|orientation"
             android:name="com.leigo.android.controller.activity.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/label_settings"
+            android:name="com.leigo.android.controller.activity.SettingsActivity"
             android:screenOrientation="portrait" />
     </application>
 

@@ -1,12 +1,30 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wumii="http://schemas.android.com/apk/res-auto">
+
+    <ListView
+        android:id="@id/list_view"
+        android:background="@android:color/transparent"
+        android:fadingEdge="none"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:listSelector="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@null" />
+
+    <ViewStub
+        android:id="@id/back_to_top_guidance_stub"
+        android:layout="@layout/up_indicator_mask_guidance"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
 
     <TextView
-        android:text="@string/app_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-</RelativeLayout>
+        android:textSize="15.0sp"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:id="@id/action_bar_toast"
+        android:background="@color/action_bar_toast_bg"
+        android:visibility="invisible"
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip" />
+</merge>

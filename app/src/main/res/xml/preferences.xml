@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.leigo.android.view.IconPreference
+        android:title="@string/settings_title_blocked_user"
+        android:key="blocked_user_settings" />
+    <com.leigo.android.view.IconPreference
+        android:title="@string/settings_title_sys_notification"
+        android:key="sys_notification_settings" />
+    <com.leigo.android.view.IconPreference
+        android:title="@string/settings_title_change_password"
+        android:key="change_password_settings" />
+    <com.leigo.android.view.IconPreference
+        android:title="@string/settings_title_privacy"
+        android:key="privacy_settings" />
+    <com.leigo.android.view.IconPreference
+        android:title="@string/settings_title_check_update"
+        android:key="version_settings" />
+    <PreferenceCategory android:title=" ">
+        <com.leigo.android.view.IconPreference
+            android:title="@string/settings_title_unlink"
+            android:key="unlink_settings" />
+        <com.leigo.android.view.IconPreference
+            android:title="@string/settings_title_logout"
+            android:key="logout_settings" />
+    </PreferenceCategory>
+</PreferenceScreen>
