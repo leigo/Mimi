@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ListView
-    android:id="@+id/list_view"
+    android:id="@id/list_view"
     android:background="@android:color/white"
     android:fadingEdge="none"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:listSelector="@android:color/transparent"
     android:cacheColorHint="@android:color/transparent"
     android:divider="@null"

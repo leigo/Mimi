@@ -51,6 +51,10 @@ public class MainActivity extends Activity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
+        if(id == R.id.action_feedback) {
+            FeedbackActivity.startFrom(this);
+            return true;
+        }
         if (id == R.id.action_settings) {
             SettingsActivity.startFrom(this);
             return true;

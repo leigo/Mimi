@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView
-    android:textSize="18.0sp"
-    android:gravity="center_vertical"
-    android:paddingLeft="10.0dip"
+<LinearLayout
     android:layout_width="wrap_content"
     android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android" />
+    android:onClick="clickOnFeedType"
+    style="@style/ActionButton"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:textSize="18.0sp"
+        android:gravity="center_vertical"
+        android:id="@id/feed_type_name"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:drawablePadding="5.0dip" />
+
+    <ImageView
+        android:layout_gravity="bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5.0dip"
+        android:src="@drawable/ic_triangle"
+        android:contentDescription="@null" />
+</LinearLayout>

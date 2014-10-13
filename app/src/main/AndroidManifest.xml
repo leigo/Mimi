@@ -34,16 +34,16 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:logo="@drawable/ic_logo"
+        android:name="com.leigo.android.config.MainApplication"
         android:theme="@style/BaseTheme">
         <activity
             android:configChanges="keyboardHidden|orientation"
             android:launchMode="singleTop"
+            android:name="com.leigo.android.controller.activity.MainActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/MainActivity"
-            android:name="com.leigo.android.controller.activity.MainActivity">
+            android:theme="@style/MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -52,6 +52,24 @@
             android:name="com.leigo.android.controller.activity.AuthenticatorActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/label_verification_title"
+            android:name="com.leigo.android.controller.activity.VerificationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/label_forgot_password"
+            android:name="com.leigo.android.controller.activity.ForgotPasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/label_change_password"
+            android:name="com.leigo.android.controller.activity.ChangePasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/label_select_region"
@@ -66,13 +84,145 @@
             android:theme="@style/NoActionBar" />
         <activity
             android:configChanges="keyboardHidden|orientation"
+            android:name="com.leigo.android.controller.activity.SecretActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBaseTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="secret"
+                    android:scheme="wmmimi" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/label_publish_secret"
+            android:name="com.leigo.android.controller.activity.PublishSecretActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter android:label="@string/share_to_mimi">
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:configChanges="keyboardHidden|orientation"
+            android:name="com.leigo.android.controller.activity.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Fullscreen" />
+        <activity
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/label_feedback"
+            android:name="com.leigo.android.controller.activity.FeedbackActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:configChanges="keyboardHidden|orientation"
             android:name="com.leigo.android.controller.activity.WebViewActivity"
             android:screenOrientation="portrait" />
         <activity
             android:configChanges="keyboardHidden|orientation"
+            android:label="@string/label_notification"
+            android:name="com.leigo.android.controller.activity.NotificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/XListViewTitledActivity" />
+        <activity
+            android:configChanges="keyboardHidden|orientation"
             android:label="@string/label_settings"
             android:name="com.leigo.android.controller.activity.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SettingsActivity" />
+        <activity
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/label_blocked_user"
+            android:name="com.leigo.android.controller.activity.BlockedUserActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/XListViewTitledActivity" />
+        <activity
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/label_title_contact_selection"
+            android:logo="@drawable/ic_logo"
+            android:name="com.leigo.android.controller.activity.ContactSelectionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/label_search_image"
+            android:name="com.leigo.android.controller.activity.SearchImageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_invite"
+            android:launchMode="singleTop"
+            android:logo="@drawable/ic_logo"
+            android:name="com.leigo.android.controller.activity.InviteActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="friend"
+                    android:path="/add"
+                    android:scheme="wmmimi" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/label_sms_edit"
+            android:name="com.leigo.android.controller.activity.SmsEditActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/label_sys_notification"
+            android:name="com.leigo.android.controller.activity.SysNotificationActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/label_sys_notification_detail"
+            android:name="com.leigo.android.controller.activity.SysNotificationDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:configChanges="keyboardHidden|orientation"
+            android:name="com.leigo.android.controller.activity.DialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogActivity" />
+        <activity
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/label_chat"
+            android:name="com.leigo.android.controller.activity.ChatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:configChanges="keyboardHidden|orientation"
+            android:name="com.leigo.android.controller.activity.ChatDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/label_chat_select_image"
+            android:name="com.leigo.android.controller.activity.ChatSelectImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/label_album"
+            android:name="com.leigo.android.album.GalleryPickerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/label_chat_image"
+            android:name="com.leigo.android.controller.activity.ChatImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/OverlayActionBar" />
     </application>
 
 </manifest>

@@ -66,13 +66,6 @@
         <item name="android:paddingRight">15.0dip</item>
     </style>
 
-    <style name="Widget" />
-
-    <style name="Widget.IconPageIndicator" parent="@style/Widget">
-        <item name="android:layout_marginLeft">6.0dip</item>
-        <item name="android:layout_marginRight">6.0dip</item>
-    </style>
-
     <style name="PreferenceCheckbox" parent="@android:style/Widget.CompoundButton.CheckBox">
         <item name="android:button">@drawable/slide_check_box</item>
         <item name="android:width">85.0dip</item>

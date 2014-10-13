@@ -2,7 +2,7 @@
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:wumii="http://schemas.android.com/apk/res-auto">
 
-    <ListView
+    <com.wumii.android.view.XListView
         android:id="@id/list_view"
         android:background="@android:color/transparent"
         android:fadingEdge="none"
@@ -10,7 +10,9 @@
         android:layout_height="fill_parent"
         android:listSelector="@android:color/transparent"
         android:cacheColorHint="@android:color/transparent"
-        android:divider="@null" />
+        android:divider="@null"
+        wumii:headerOffset="0"
+        wumii:hintTextColor="?xlist_view_hint_text" />
 
     <ViewStub
         android:id="@id/back_to_top_guidance_stub"
