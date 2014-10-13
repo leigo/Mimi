@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@id/avatar"
+        android:layout_width="@dimen/comment_item_avatar_size"
+        android:layout_height="@dimen/comment_item_avatar_size"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginTop="12.0dip"
+        android:layout_marginRight="8.0dip" />
+
+    <RelativeLayout
+        android:id="@id/comment_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true">
+
+        <ImageView
+            android:id="@id/like"
+            android:paddingLeft="10.0dip"
+            android:paddingTop="12.0dip"
+            android:paddingRight="10.0dip"
+            android:paddingBottom="10.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_comment_like_gray_big"
+            android:layout_centerInParent="true"
+            android:onClick="clickOnLikeComment" />
+
+        <ImageView
+            android:id="@id/failed"
+            android:paddingLeft="10.0dip"
+            android:paddingTop="12.0dip"
+            android:paddingRight="10.0dip"
+            android:paddingBottom="10.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_send_failed"
+            android:layout_centerInParent="true"
+            android:onClick="clickOnResendComment" />
+
+        <ProgressBar
+            android:id="@id/sending"
+            android:layout_width="28.0dip"
+            android:layout_height="28.0dip"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:textSize="16.0sp"
+        android:id="@id/comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:layout_toLeftOf="@id/comment_status"
+        android:layout_toRightOf="@id/avatar" />
+
+    <TextView
+        android:textSize="12.0sp"
+        android:textColor="@color/comment_information_text"
+        android:gravity="center_vertical"
+        android:id="@id/comment_info"
+        android:paddingTop="2.0dip"
+        android:paddingBottom="10.0dip"
+        android:layout_width="wrap_content"
+        android:layout_height="30.0dip"
+        android:includeFontPadding="false"
+        android:layout_below="@id/comment"
+        android:layout_alignLeft="@id/comment" />
+
+    <View
+        android:id="@id/line"
+        android:background="?android:listDivider"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_below="@id/comment_info"
+        android:layout_alignLeft="@id/comment" />
+</RelativeLayout>

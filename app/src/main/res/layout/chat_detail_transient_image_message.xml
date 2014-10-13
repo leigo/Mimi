@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@id/image"
+        android:padding="@dimen/image_message_padding_default"
+        android:layout_width="@dimen/transient_image_message_width"
+        android:layout_height="@dimen/transient_image_message_height"
+        android:onClick="clickOnTransientImageMessage"
+        android:contentDescription="@null" />
+
+    <ImageView
+        android:id="@id/curtain"
+        android:padding="@dimen/image_message_padding_default"
+        android:layout_width="@dimen/transient_image_message_width"
+        android:layout_height="@dimen/transient_image_message_height"
+        android:src="@drawable/chat_transient_image_curtain_bg"
+        android:contentDescription="@null" />
+</RelativeLayout>

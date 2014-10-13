@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    android:paddingBottom="20.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:stretchColumns="*"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TableRow>
+
+        <TextView
+            android:id="@id/share_weixin"
+            android:text="@string/weixin"
+            android:drawableTop="@drawable/ic_share_weixin"
+            style="@style/ShareButton" />
+
+        <TextView
+            android:id="@id/share_pengyouquan"
+            android:text="@string/pengyouquan"
+            android:drawableTop="@drawable/ic_share_pengyouquan"
+            style="@style/ShareButton" />
+
+        <TextView
+            android:id="@id/share_sina_weibo"
+            android:text="@string/sina_weibo"
+            android:drawableTop="@drawable/ic_share_sina_weibo"
+            style="@style/ShareButton" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:id="@id/share_qq"
+            android:text="@string/qq"
+            android:drawableTop="@drawable/ic_share_qq"
+            style="@style/ShareButton" />
+
+        <TextView
+            android:id="@id/share_qzone"
+            android:text="@string/qzone"
+            android:drawableTop="@drawable/ic_share_qzone"
+            style="@style/ShareButton" />
+
+        <TextView
+            android:id="@id/share_renren"
+            android:text="@string/renren"
+            android:drawableTop="@drawable/ic_share_renren"
+            style="@style/ShareButton" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:id="@id/share_sms"
+            android:text="@string/sms"
+            android:drawableTop="@drawable/ic_share_sms"
+            style="@style/ShareButton" />
+
+        <TextView
+            android:id="@id/share_system"
+            android:text="@string/system_share"
+            android:drawableTop="@drawable/ic_share_system"
+            style="@style/ShareButton" />
+    </TableRow>
+</TableLayout>

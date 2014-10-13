@@ -7,7 +7,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <ImageView
-        android:id="@id/conversation"
+        android:id="@id/chat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_action_conversation"
@@ -17,10 +17,10 @@
         android:textSize="11.0sp"
         android:textColor="@android:color/white"
         android:gravity="center"
-        android:id="@id/conversation_count"
+        android:id="@id/chat_count"
         android:background="@drawable/ic_unread_count_bg"
         android:visibility="invisible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@id/conversation" />
+        android:layout_alignRight="@id/chat" />
 </RelativeLayout>

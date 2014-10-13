@@ -41,8 +41,14 @@
     <color name="sys_notification_item_info">#ffb4b4b4</color>
     <color name="num_selected_contacts">#ff6f7478</color>
     <color name="contact_selection_text">#ff343434</color>
-    <color name="conversation_unsupported_bg">#b2ff9a03</color>
-    <color name="conversation_detail_message_converser">#ff1f2326</color>
+    <color name="chat_unsupported_bg">#b2ff9a03</color>
+    <color name="chat_text_converser">#ff1f2326</color>
+    <color name="chat_text_login_user">@android:color/white</color>
+    <color name="chat_transient_image_curtain_bg">#4f000000</color>
+    <color name="image_countdown_bg">#ff787878</color>
+    <color name="image_countdown_text">@android:color/white</color>
+    <color name="image_look_tips">#ffff6364</color>
+    <color name="image_removed_tips">#ffbebebe</color>
     <color name="search_image_edit_bg">#fff0f0f0</color>
     <color name="search_image_item_bg">@color/search_image_edit_bg</color>
     <color name="hot_search_key_bg_pressed">#ff18937b</color>

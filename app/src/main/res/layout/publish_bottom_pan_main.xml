@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    android:orientation="vertical"
+    android:paddingLeft="10.0dip"
+    android:paddingTop="20.0dip"
+    android:paddingRight="10.0dip"
+    android:paddingBottom="20.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/publish_bottom_pan_height"
+    android:stretchColumns="*"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TableRow>
+
+        <TextView
+            android:id="@id/camera"
+            android:text="@string/publish_bottom_pan_camera"
+            android:drawableTop="@drawable/ic_publish_bottom_pan_camera"
+            android:onClick="clickOnCamera"
+            style="@style/PublishBottomPanMainItem" />
+
+        <TextView
+            android:id="@id/album"
+            android:text="@string/publish_bottom_pan_album"
+            android:drawableTop="@drawable/ic_publish_bottom_pan_album"
+            android:onClick="clickOnAlbum"
+            style="@style/PublishBottomPanMainItem" />
+
+        <TextView
+            android:id="@id/search"
+            android:text="@string/publish_bottom_pan_search"
+            android:drawableTop="@drawable/ic_publish_bottom_pan_search"
+            android:onClick="clickOnSearch"
+            style="@style/PublishBottomPanMainItem" />
+
+        <TextView
+            android:id="@id/template"
+            android:text="@string/publish_bottom_pan_tempalte"
+            android:drawableTop="@drawable/ic_publish_bottom_pan_template"
+            style="@style/PublishBottomPanMainItem" />
+    </TableRow>
+
+    <TableRow android:layout_marginTop="15.0dip">
+
+        <TextView
+            android:textColor="@color/publish_bottom_pan_item_title_disabled"
+            android:id="@id/effect"
+            android:layout_column="3"
+            android:text="@string/publish_bottom_pan_effect"
+            android:drawableTop="@drawable/ic_publish_bottom_pan_effect_disabled"
+            style="@style/PublishBottomPanMainItem" />
+    </TableRow>
+</TableLayout>

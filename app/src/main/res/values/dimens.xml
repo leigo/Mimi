@@ -18,10 +18,15 @@
     <dimen name="secret_icon_left_spacing">12.0dip</dimen>
     <dimen name="secret_reason_margin_left">10.0dip</dimen>
     <dimen name="secret_countdown_text">13.0sp</dimen>
-    <dimen name="conversation_detail_item_avatar_size">46.0dip</dimen>
-    <dimen name="conversation_list_item_height">72.0dip</dimen>
-    <dimen name="conversation_list_item_avatar_size">46.0dip</dimen>
-    <item type="dimen" name="conversation_list_item_secret_size">
-        @dimen/conversation_list_item_height
-    </item>
+    <dimen name="chat_detail_item_avatar_size">46.0dip</dimen>
+    <dimen name="chat_detail_item_image_message_min_size">45.0dip</dimen>
+    <dimen name="chat_detail_item_image_message_max_size">135.0dip</dimen>
+    <dimen name="transient_image_message_width">100.0dip</dimen>
+    <dimen name="transient_image_message_height">100.0dip</dimen>
+    <dimen name="image_message_corner_size">14.0dip</dimen>
+    <dimen name="image_message_padding_default">2.0dip</dimen>
+    <dimen name="chat_list_item_height">72.0dip</dimen>
+    <dimen name="chat_list_item_width">72.0dip</dimen>
+    <dimen name="chat_list_item_avatar_size">46.0dip</dimen>
+    <item type="dimen" name="chat_list_item_secret_size">@dimen/chat_list_item_height</item>
 </resources>

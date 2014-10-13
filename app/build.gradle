@@ -8,8 +8,8 @@ android {
         applicationId "com.leigo.android.mimi"
         minSdkVersion 14
         targetSdkVersion 19
-        versionCode 2001002
-        versionName "2.1.2"
+        versionCode 2003001
+        versionName "2.3.1"
     }
     buildTypes {
         release {
@@ -36,4 +36,6 @@ dependencies {
     compile files('libs/libphonenumber-6.2.jar')
     compile files('libs/commons-io-2.4.jar')
     compile 'com.google.code.gson:gson:2.2.4'
+    compile 'com.github.chrisbanes.photoview:library:1.2.2'
+
 }

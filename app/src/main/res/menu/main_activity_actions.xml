@@ -11,10 +11,10 @@
         android:showAsAction="always"
         android:actionLayout="@layout/notification_count_view" />
     <item
-        android:id="@id/action_conversation"
-        android:title="@string/action_conversation"
+        android:id="@id/action_chat"
+        android:title="@string/action_chat"
         android:showAsAction="always"
-        android:actionLayout="@layout/conversation_count_view" />
+        android:actionLayout="@layout/chat_count_view" />
     <item
         android:icon="@drawable/ic_action_more"
         android:id="@id/action_more"
