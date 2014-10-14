@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <attr name="headerOffset" format="integer" />
-    <attr name="footerOffset" format="integer" />
-    <attr name="hintTextColor" format="color" />
-    <attr name="displayUpdateTime" format="boolean" />
-    <attr name="showFooterArrow" format="boolean" />
-    <attr name="headerHintNormal" format="reference|string" />
-    <attr name="headerHintReady" format="reference|string" />
-    <attr name="headerHintLoading" format="reference|string" />
-    <attr name="footerHintNormal" format="reference|string" />
-    <attr name="footerHintReady" format="reference|string" />
-    <attr name="footerHintLoading" format="reference|string" />
-    <attr name="xlist_view_hint_text" format="color" />
-    <attr name="xlist_view_header_arrow" format="reference" />
+    <declare-styleable name="XListView">
+        <attr name="headerOffset" format="integer" />
+        <attr name="footerOffset" format="integer" />
+        <attr name="hintTextColor" format="color" />
+        <attr name="displayUpdateTime" format="boolean" />
+        <attr name="showFooterArrow" format="boolean" />
+        <attr name="headerHintNormal" format="reference|string" />
+        <attr name="headerHintReady" format="reference|string" />
+        <attr name="headerHintLoading" format="reference|string" />
+        <attr name="footerHintNormal" format="reference|string" />
+        <attr name="footerHintReady" format="reference|string" />
+        <attr name="footerHintLoading" format="reference|string" />
+        <attr name="xlist_view_hint_text" format="color" />
+        <attr name="xlist_view_header_arrow" format="reference" />
+    </declare-styleable>
+
     <declare-styleable name="QuickSelectionBar">
         <attr name="overlay_size" format="dimension" />
     </declare-styleable>
+
     <attr name="column_count" format="integer" />
     <attr name="column_count_portrait" format="integer" />
     <attr name="column_count_landscape" format="integer" />

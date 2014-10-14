@@ -1,17 +1,19 @@
 package com.leigo.android.model.domain;
 
+import com.leigo.android.mimi.R;
+
 /**
  * Created by Administrator on 2014/8/26.
  */
 public enum FeedType {
-    ALL("全部", "all"), CIRCLE("朋友", "circle"), HOT("热门", "hot");
+    ALL(R.string.feed_type_all, "all"), CIRCLE(R.string.feed_type_circle, "circle"), HOT(R.string.feed_type_hot, "hot");
 
     private String cacheFileName;
     private boolean needRefresh;
-    private String title;
+    private int titleResId;
 
-    FeedType(String title, String cacheFileName) {
-        this.title = title;
+    FeedType(int titleResId, String cacheFileName) {
+        this.titleResId = titleResId;
         this.cacheFileName = cacheFileName;
     }
 
@@ -27,7 +29,7 @@ public enum FeedType {
         this.needRefresh = needRefresh;
     }
 
-    public String title() {
-        return this.title;
+    public int titleResId() {
+        return this.titleResId;
     }
 }

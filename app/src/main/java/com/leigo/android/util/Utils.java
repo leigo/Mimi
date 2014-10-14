@@ -6,6 +6,10 @@ import android.view.animation.Animation;
 import android.widget.ListView;
 
 import java.lang.reflect.Method;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 
 /**
  * Created by Administrator on 2014/8/21.
@@ -56,5 +60,13 @@ public class Utils {
             }
         }
 
+    }
+
+    public static String getFormattedDate(String template, Date date) {
+        return new SimpleDateFormat(template, Locale.CHINA).format(date);
+    }
+
+    public static Date now() {
+        return Calendar.getInstance().getTime();
     }
 }

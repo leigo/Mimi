@@ -29,17 +29,6 @@ public class FeedTypeAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getDropDownView(int position, View convertView, ViewGroup parent) {
-        if (convertView == null) {
-            convertView = inflater.inflate(R.layout.feed_type_drop_down_item, parent, false);
-        }
-        TextView textView = (TextView) convertView;
-        textView.setText(getItem(position).title());
-        textView.setTag(getItem(position));
-        return convertView;
-    }
-
-    @Override
     public FeedType getItem(int position) {
         return FeedType.values()[position];
     }
@@ -52,14 +41,19 @@ public class FeedTypeAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
-            convertView = inflater.inflate(R.layout.feed_type_view, parent, false);
+            convertView = inflater.inflate(R.layout.feed_type_drop_down_item, parent, false);
         }
-        ((TextView) convertView).setText(getItem(position).title());
+        FeedType feedType = getItem(position);
+        TextView textView = (TextView) convertView;
+        textView.setText(feedType.titleResId());
+        if (feedType == FeedType.CIRCLE && hasNewSecretOfFriend) {
+            textView.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_red_dot_small, 0);
+        }
         return convertView;
     }
 
     public boolean isHasNewSecretOfFriend() {
-        return this.hasNewSecretOfFriend;
+        return hasNewSecretOfFriend;
     }
 
     public void setHasNewSecretOfFriend(boolean hasNewSecretOfFriend) {

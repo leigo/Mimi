@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="secret_operation">
+        <item>分享</item>
+        <item>@string/menu_remove</item>
+        <item>举报</item>
+    </string-array>
+    <string-array name="report_block_items">
+        <item>举报</item>
+        <item>@string/block</item>
+    </string-array>
+    <string-array name="report_unblock_items">
+        <item>举报</item>
+        <item>@string/unblock</item>
+    </string-array>
+    <string-array name="violation_type_descs">
+        <item>人身攻击</item>
+        <item>暴力色情</item>
+        <item>谣言及虚假信息</item>
+        <item>广告</item>
+        <item>违反法规法律</item>
+        <item>其它</item>
+    </string-array>
+    <string-array name="violation_types">
+        <item>PERSONAL_ATTACK</item>
+        <item>VIOLENCE_SEX</item>
+        <item>RUMOR</item>
+        <item>AD</item>
+        <item>ILLEGAL</item>
+        <item>OTHER</item>
+    </string-array>
+    <array name="templates_s">
+        <item>@drawable/s_1</item>
+        <item>@drawable/s_2</item>
+        <item>@drawable/s_3</item>
+        <item>@drawable/s_4</item>
+        <item>@drawable/s_5</item>
+        <item>@drawable/s_6</item>
+        <item>@drawable/s_7</item>
+        <item>@drawable/s_8</item>
+        <item>@drawable/s_9</item>
+        <item>@drawable/s_10</item>
+        <item>@drawable/s_11</item>
+        <item>@drawable/s_12</item>
+        <item>@drawable/s_13</item>
+        <item>@drawable/s_14</item>
+        <item>@drawable/s_15</item>
+        <item>@drawable/s_16</item>
+        <item>@drawable/s_17</item>
+        <item>@drawable/s_18</item>
+        <item>@drawable/s_19</item>
+        <item>@drawable/s_20</item>
+        <item>@drawable/s_21</item>
+        <item>@drawable/s_22</item>
+        <item>@drawable/s_23</item>
+        <item>@drawable/s_24</item>
+        <item>@drawable/s_25</item>
+        <item>@drawable/s_26</item>
+        <item>@drawable/s_27</item>
+        <item>@drawable/s_28</item>
+        <item>@drawable/s_29</item>
+        <item>@drawable/s_30</item>
+    </array>
+    <string-array name="hot_search_keys">
+        <item>拥抱</item>
+        <item>旅行</item>
+        <item>爱情</item>
+        <item>开心</item>
+        <item>猥琐</item>
+        <item>孤独</item>
+        <item>奋斗</item>
+        <item>美女</item>
+        <item>帅哥</item>
+        <item>喵星人</item>
+        <item>汪星人</item>
+        <item>天空</item>
+        <item>大海</item>
+        <item>街道</item>
+        <item>校园</item>
+    </string-array>
+    <string-array name="filter_resource_inkwell">
+        <item>inkwell_map</item>
+    </string-array>
+    <string-array name="filter_resource_kelvin">
+        <item>kelvin_map</item>
+    </string-array>
+    <string-array name="filter_resource_nashville">
+        <item>nashville_map</item>
+    </string-array>
+    <string-array name="filter_resource_1977">
+        <item>map_1977</item>
+        <item>blowout_1977</item>
+    </string-array>
+    <string-array name="filter_resource_lomo">
+        <item>lomo_map</item>
+        <item>vignette_map</item>
+    </string-array>
+    <string-array name="filter_resource_valencia">
+        <item>valencia_map</item>
+        <item>valencia_gradient_map</item>
+    </string-array>
+    <string-array name="filter_resource_walden">
+        <item>walden_map</item>
+        <item>vignette_map</item>
+    </string-array>
+    <string-array name="filter_resource_xpro2">
+        <item>xpro_map</item>
+        <item>vignette_map</item>
+    </string-array>
+    <string-array name="filter_resource_rise">
+        <item>blackboard_1024</item>
+        <item>overlay_map</item>
+        <item>rise_map</item>
+    </string-array>
+    <string-array name="filter_resource_hudson">
+        <item>hudson_background</item>
+        <item>overlay_map</item>
+        <item>hudson_map</item>
+    </string-array>
+    <string-array name="filter_resource_amaro">
+        <item>blackboard_1024</item>
+        <item>overlay_map</item>
+        <item>amaro_map</item>
+    </string-array>
+    <string-array name="filter_resource_sierra">
+        <item>sierra_vignette</item>
+        <item>overlay_map</item>
+        <item>sierra_map</item>
+    </string-array>
+    <string-array name="filter_resource_earlybird">
+        <item>earlybird_curves</item>
+        <item>earlybird_overlay_map</item>
+        <item>vignette_map</item>
+        <item>earlybird_blowout</item>
+        <item>earlybird_map</item>
+    </string-array>
+    <string-array name="filter_resource_brannan">
+        <item>brannan_process</item>
+        <item>brannan_blowout</item>
+        <item>brannan_contrast</item>
+        <item>brannan_luma</item>
+        <item>brannan_screen</item>
+    </string-array>
+    <string-array name="filter_resource_toaster">
+        <item>toaster_metal</item>
+        <item>toaster_soft_light</item>
+        <item>toaster_curves</item>
+        <item>toaster_overlay_map_warm</item>
+        <item>toaster_color_shift</item>
+    </string-array>
+    <string-array name="filter_resource_hefe">
+        <item>edge_burn</item>
+        <item>hefe_map</item>
+        <item>hefe_gradient_map</item>
+        <item>hefe_soft_light</item>
+        <item>hefe_metal</item>
+    </string-array>
+    <string-array name="filter_resource_sutro">
+        <item>vignette_map</item>
+        <item>sutro_metal</item>
+        <item>soft_light</item>
+        <item>sutro_edge_burn</item>
+        <item>sutro_curves</item>
+    </string-array>
+</resources>

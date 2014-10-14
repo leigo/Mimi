@@ -2,7 +2,7 @@
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:wumii="http://schemas.android.com/apk/res-auto">
 
-    <com.wumii.android.view.XListView
+    <com.leigo.android.view.XListView
         android:id="@id/list_view"
         android:background="@android:color/transparent"
         android:fadingEdge="none"
