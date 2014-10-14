@@ -2,6 +2,7 @@ package com.leigo.android.controller.activity;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Handler;
@@ -11,6 +12,8 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.PopupWindow;
@@ -25,6 +28,9 @@ import com.leigo.android.util.Utils;
 public class MainActivity extends Activity {
 
     private DisplayMetrics displayMetrics;
+
+    private Animation fadeIn;
+    private Animation fadeOut;
 
     private FeedTypeAdapter feedTypeAdapter;
     private TextView feedTypeName;
@@ -68,8 +74,23 @@ public class MainActivity extends Activity {
         }
         if (feedTypePopup.isShowing()) {
             feedTypePopup.dismiss();
+        } else {
+            feedTypePopup.showAsDropDown(v, -(int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10.0f, displayMetrics), -(int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 5.0F, displayMetrics));
         }
-        feedTypePopup.showAsDropDown(v, -(int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10.0f, this.displayMetrics), -(int) TypedValue.applyDimension(1, 5.0F, displayMetrics));
+    }
+
+    private Animation getFadeInAnimation() {
+        if (fadeIn == null) {
+            fadeIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
+        }
+        return fadeIn;
+    }
+
+    private Animation getFadeOutAnimation() {
+        if (fadeOut == null) {
+            fadeOut = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_out);
+        }
+        return fadeOut;
     }
 
     private void initFeedTypePopup() {
@@ -101,6 +122,7 @@ public class MainActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_activity_actions, menu);
+        MenuItem newSecretMenuItem = menu.findItem(R.id.action_new_secret);
         MenuItem notificationMenuItem = menu.findItem(R.id.action_notification);
         return true;
     }
@@ -108,16 +130,24 @@ public class MainActivity extends Activity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.action_feedback) {
-            FeedbackActivity.startFrom(this);
-            return true;
-        }
-        if (id == R.id.action_settings) {
-            SettingsActivity.startFrom(this);
-            return true;
+        switch (id) {
+            case R.id.action_feedback:
+                startActivity(new Intent(this, FeedbackActivity.class));
+                return true;
+            case R.id.action_settings:
+                SettingsActivity.startFrom(this);
+                return true;
+            case R.id.action_new_secret:
+                clickOnPublishAnonymously(null);
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }
+
+    public void clickOnPublishAnonymously(View v) {
+        startActivityForResult(new Intent(this, PublishSecretActivity.class), 0);
+    }
+
 
     @Override
     public void onBackPressed() {

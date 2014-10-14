@@ -1,8 +1,10 @@
 package com.leigo.android.util;
 
 import android.os.Build;
+import android.os.IBinder;
 import android.view.View;
 import android.view.animation.Animation;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ListView;
 
 import java.lang.reflect.Method;
@@ -17,6 +19,22 @@ import java.util.Locale;
 public class Utils {
 
     private static final Logger logger = new Logger(Utils.class);
+
+    public static boolean beforeYesterday(long milliseconds) {
+        return System.currentTimeMillis() - milliseconds> 24 * 60 * 60 * 1000;
+    }
+
+    public static String getDrawableUriFromResId(int resId) {
+        return "drawable://" + resId;
+    }
+
+    public static boolean isDefaultSecretTemplate(String template) {
+        return template.endsWith("/resources/background/1.jpg");
+    }
+
+    public static void hideSoftKeyboard(InputMethodManager inputMethodManager, IBinder token) {
+        inputMethodManager.hideSoftInputFromInputMethod(token, 0);
+    }
 
     public static void startAnimation(final View view, Animation animation, final int visibility) {
         animation.setAnimationListener(new Animation.AnimationListener() {
