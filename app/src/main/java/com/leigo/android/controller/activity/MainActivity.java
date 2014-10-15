@@ -22,10 +22,19 @@ import android.widget.TextView;
 import com.leigo.android.controller.adapter.FeedTypeAdapter;
 import com.leigo.android.mimi.R;
 import com.leigo.android.model.domain.FeedType;
+import com.leigo.android.util.Logger;
 import com.leigo.android.util.Utils;
+import com.leigo.android.view.XListView;
+import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.Request;
+import com.squareup.okhttp.Response;
+
+import java.io.IOException;
 
 
 public class MainActivity extends Activity {
+
+    private static final Logger logger = new Logger(MainActivity.class);
 
     private DisplayMetrics displayMetrics;
 
@@ -38,6 +47,7 @@ public class MainActivity extends Activity {
 
     private FeedType lastFeedType;
 
+    private XListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,14 +68,9 @@ public class MainActivity extends Activity {
         feedTypeAdapter = new FeedTypeAdapter(this);
         lastFeedType = FeedType.ALL;
         feedTypeName.setText(lastFeedType.titleResId());
-        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
-        actionBar.setListNavigationCallbacks(feedTypeAdapter, new ActionBar.OnNavigationListener() {
-            @Override
-            public boolean onNavigationItemSelected(int itemPosition, long itemId) {
-                changeFeedType(FeedType.values()[itemPosition]);
-                return true;
-            }
-        });
+
+        listView = (XListView) findViewById(R.id.list_view);
+        listView.enablePullRefresh(false);
     }
 
     public void clickOnFeedType(View v) {
@@ -122,8 +127,30 @@ public class MainActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_activity_actions, menu);
-        MenuItem newSecretMenuItem = menu.findItem(R.id.action_new_secret);
-        MenuItem notificationMenuItem = menu.findItem(R.id.action_notification);
+        MenuItem newSecretItem = menu.findItem(R.id.action_new_secret);
+
+        final MenuItem notificationItem = menu.findItem(R.id.action_notification);
+        View notificationActionView = notificationItem.getActionView();
+        notificationActionView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Utils.showActionMenuItemTitle(notificationItem);
+                return true;
+            }
+        });
+
+        final MenuItem chatItem = menu.findItem(R.id.action_chat);
+        View chatActionView = chatItem.getActionView();
+        chatActionView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Utils.showActionMenuItemTitle(chatItem);
+                return true;
+            }
+        });
+
+        MenuItem moreItem = menu.findItem(R.id.action_more);
+        MenuItem settingsItem = menu.findItem(R.id.action_settings);
         return true;
     }
 
@@ -139,6 +166,9 @@ public class MainActivity extends Activity {
                 return true;
             case R.id.action_new_secret:
                 clickOnPublishAnonymously(null);
+                return true;
+            case R.id.action_invite:
+                startActivity(new Intent(this, InviteActivity.class));
                 return true;
         }
         return super.onOptionsItemSelected(item);
