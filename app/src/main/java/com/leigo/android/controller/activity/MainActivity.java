@@ -25,11 +25,6 @@ import com.leigo.android.model.domain.FeedType;
 import com.leigo.android.util.Logger;
 import com.leigo.android.util.Utils;
 import com.leigo.android.view.XListView;
-import com.squareup.okhttp.OkHttpClient;
-import com.squareup.okhttp.Request;
-import com.squareup.okhttp.Response;
-
-import java.io.IOException;
 
 
 public class MainActivity extends Activity {
@@ -53,9 +48,9 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         boolean isAuthentication = false;
-//        if (!isAuthentication) {
-//            AccountGuidanceActivity.startFrom(this);
-//        }
+        if (!isAuthentication) {
+            AccountGuidanceActivity.startFrom(this);
+        }
         displayMetrics = getResources().getDisplayMetrics();
 
         setContentView(R.layout.activity_main);

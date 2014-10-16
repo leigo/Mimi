@@ -12,6 +12,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.i18n.phonenumbers.NumberParseException;
+import com.google.i18n.phonenumbers.PhoneNumberUtil;
 import com.google.inject.Inject;
 import com.leigo.android.mimi.R;
 import com.leigo.android.model.domain.Country;
@@ -64,6 +66,14 @@ public class AuthenticatorActivity extends TrackedRoboActivity {
     @InjectView(R.id.region_name)
     private TextView regionNameView;
 
+    private boolean isValidNumber() {
+        try {
+            PhoneNumberUtil.getInstance().parse(country.getCode() + phoneNumberView.getText().toString(), null);
+            return true;
+        } catch (NumberParseException e) {
+            return false;
+        }
+    }
 
     public static void startFrom(Context context, int authenticatorType) {
         Intent intent = new Intent(context, AuthenticatorActivity.class);
@@ -77,20 +87,56 @@ public class AuthenticatorActivity extends TrackedRoboActivity {
     }
 
     public void clickOnButton(View v) {
-        String str1 = phoneNumberView.getText().toString();
-        String str2 = passwordView.getText().toString().trim();
-        if (TextUtils.isEmpty(str1)) {
+        String phoneNumber = phoneNumberView.getText().toString();
+        String password = passwordView.getText().toString().trim();
+        if (TextUtils.isEmpty(phoneNumber)) {
             contextToast.show(R.string.toast_input_phone_number, Toast.LENGTH_SHORT);
             return;
         }
-        if (TextUtils.isEmpty(str2)) {
+        if (!isValidNumber()) {
+            contextToast.show(R.string.toast_invalid_phone_numbers, Toast.LENGTH_SHORT);
+            return;
+        }
+        if (TextUtils.isEmpty(password)) {
             contextToast.show(R.string.toast_input_password, Toast.LENGTH_SHORT);
             return;
         }
+        if (password.length() < 6) {
+            contextToast.show(R.string.toast_password_too_short, Toast.LENGTH_SHORT);
+            return;
+        }
+        if (authenticatorType == 2) {
+
+        }
     }
 
-    public void clickOnRegion(View paramView) {
+    public void clickOnForgotPassword(View v) {
+        ForgotPasswordActivity.startFrom(this, phoneNumberView.getText().toString());
+    }
+
+    public void clickOnProtocol(View v) {
+        WebViewActivity.startFrom(this, HttpHelper.createUrl("protocol"));
+    }
+
+    public void clickOnRegion(View v) {
         RegionSelectionActivity.startFrom(this);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode != RESULT_OK) {
+            return;
+        }
+        switch (requestCode) {
+            case 5:
+                phoneNumberView.setText(data.getStringExtra("phoneNumber"));
+                break;
+            case 6:
+                country = (Country) data.getParcelableExtra("country");
+                updateRegionInfo(country);
+                break;
+        }
     }
 
     @Override
@@ -118,10 +164,16 @@ public class AuthenticatorActivity extends TrackedRoboActivity {
                 Utils.setVisibility(forgotPassword, View.GONE);
                 break;
         }
-    }
-
-    public void clickOnProtocol(View v) {
-        WebViewActivity.startFrom(this, HttpHelper.createUrl("protocol"));
+        phoneNumberView.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus) {
+                    Utils.updateViewBackgroundResource(regionLayout, R.drawable.textfield_focused_holo_light);
+                } else {
+                    Utils.updateViewBackgroundResource(regionLayout, R.drawable.textfield_default_holo_light);
+                }
+            }
+        });
     }
 
     @Override
