@@ -33,6 +33,7 @@ public class FloatDrawable extends Drawable {
             int top = getBounds().top;
             int right = getBounds().right;
             int bottom = getBounds().bottom;
+            mRect.set(left, top, right, bottom);
         }
         //方框
         canvas.drawRect(mRect, mLinePaint);

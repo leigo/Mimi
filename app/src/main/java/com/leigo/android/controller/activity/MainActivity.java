@@ -66,6 +66,25 @@ public class MainActivity extends Activity {
 
         listView = (XListView) findViewById(R.id.list_view);
         listView.enablePullRefresh(false);
+
+
+        //        AsyncHttpClient client = new AsyncHttpClient();
+//        RequestParams params = new RequestParams();
+//        params.add("type", "ALL");
+//        params.put("lon", 22.6099480000);
+//        params.put("lat", 114.0434600000);
+//        params.put("coordtype", "BD09LL");
+//        client.get("https://www.wumii.org/app/feeds", params, new TextHttpResponseHandler() {
+//            @Override
+//            public void onFailure(int i, Header[] headers, String s, Throwable throwable) {
+//                logger.d(s);
+//            }
+//
+//            @Override
+//            public void onSuccess(int i, Header[] headers, String s) {
+//                logger.d(s);
+//            }
+//        });
     }
 
     public void clickOnFeedType(View v) {

@@ -8,6 +8,7 @@ import android.graphics.Rect;
 import android.media.ExifInterface;
 import android.os.Build;
 import android.os.IBinder;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.MenuItem;
@@ -91,6 +92,10 @@ public class Utils {
         opts.inJustDecodeBounds = false;
         opts.inDither = false;
         return rotateBitmap(BitmapFactory.decodeFile(pathName, opts), getExifOrientation(pathName));
+    }
+
+    public static Bitmap decodeFile(String imagePath, DisplayMetrics displayMetrics) {
+        return null;
     }
 
     // Rotates the bitmap by the specified degree.
