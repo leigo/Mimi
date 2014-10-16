@@ -237,4 +237,13 @@ public class Utils {
     public static Date now() {
         return Calendar.getInstance().getTime();
     }
+
+    public static void updateViewBackgroundResource(View view, int resid) {
+        int left = view.getPaddingLeft();
+        int top = view.getPaddingTop();
+        int right = view.getPaddingRight();
+        int bottom = view.getPaddingBottom();
+        view.setBackgroundResource(resid);
+        view.setPadding(left, top, right, bottom);
+    }
 }

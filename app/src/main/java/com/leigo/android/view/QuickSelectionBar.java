@@ -30,11 +30,11 @@ public class QuickSelectionBar extends View {
 
 
     public QuickSelectionBar(Context context) {
-        super(context);
+        this(context, null);
     }
 
     public QuickSelectionBar(Context context, AttributeSet attrs) {
-        super(context, attrs, 0);
+        this(context, attrs, 0);
     }
 
     public QuickSelectionBar(Context context, AttributeSet attrs, int defStyle) {
@@ -82,6 +82,7 @@ public class QuickSelectionBar extends View {
         } else {
             popupWindow.showAtLocation(getRootView(), Gravity.CENTER, 0, 0);
         }
+
     }
 
     @Override
@@ -94,17 +95,17 @@ public class QuickSelectionBar extends View {
 
         switch (action) {
             case MotionEvent.ACTION_DOWN:
-                if (position > 0 && position < indexer.size()) {
+                if (position >= 0 && position < indexer.size()) {
                     performItemSelected(position);
                 }
-                break;
+                return true;
             case MotionEvent.ACTION_MOVE:
                 break;
             case MotionEvent.ACTION_UP:
                 dismissPopup();
-                break;
+                return true;
         }
-        return true;
+        return super.dispatchTouchEvent(event);
     }
 
     @Override
@@ -114,10 +115,10 @@ public class QuickSelectionBar extends View {
             return;
         }
 
-        int height = getHeight();
-        int width = getWidth();
+        int height = getHeight(); //获取对应高度
+        int width = getWidth(); //获取对应宽度
         int size = indexer.size();
-        float indexerHeight = height / size;
+        float indexerHeight = height / size; //获取每一个字母的高度
         for (int i = 0; i < size; i++) {
             String index = indexer.valueAt(i);
             Rect rect = new Rect();

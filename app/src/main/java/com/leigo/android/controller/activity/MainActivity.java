@@ -48,9 +48,9 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         boolean isAuthentication = false;
-//        if (!isAuthentication) {
-//            AccountGuidanceActivity.startFrom(this);
-//        }
+        if (!isAuthentication) {
+            AccountGuidanceActivity.startFrom(this);
+        }
         displayMetrics = getResources().getDisplayMetrics();
 
         setContentView(R.layout.activity_main);
