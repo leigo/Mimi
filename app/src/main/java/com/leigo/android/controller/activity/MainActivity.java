@@ -25,6 +25,11 @@ import com.leigo.android.model.domain.FeedType;
 import com.leigo.android.util.Logger;
 import com.leigo.android.util.Utils;
 import com.leigo.android.view.XListView;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.RequestParams;
+import com.loopj.android.http.TextHttpResponseHandler;
+
+import org.apache.http.Header;
 
 
 public class MainActivity extends Activity {
@@ -47,10 +52,10 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        boolean isAuthentication = false;
-        if (!isAuthentication) {
-            AccountGuidanceActivity.startFrom(this);
-        }
+//        boolean isAuthentication = false;
+//        if (!isAuthentication) {
+//            AccountGuidanceActivity.startFrom(this);
+//        }
         displayMetrics = getResources().getDisplayMetrics();
 
         setContentView(R.layout.activity_main);
@@ -67,10 +72,10 @@ public class MainActivity extends Activity {
         listView = (XListView) findViewById(R.id.list_view);
         listView.enablePullRefresh(false);
 
-
-        //        AsyncHttpClient client = new AsyncHttpClient();
+//        AsyncHttpClient client = new AsyncHttpClient();
 //        RequestParams params = new RequestParams();
-//        params.add("type", "ALL");
+//        params.put("type", "ALL");
+//        params.put("pm", "");
 //        params.put("lon", 22.6099480000);
 //        params.put("lat", 114.0434600000);
 //        params.put("coordtype", "BD09LL");

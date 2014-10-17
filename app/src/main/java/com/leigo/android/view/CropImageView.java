@@ -2,13 +2,9 @@ package com.leigo.android.view;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.Bitmap.Config;
 import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Matrix;
 import android.graphics.Rect;
 import android.graphics.Region;
-import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -24,7 +20,7 @@ import com.leigo.android.mimi.R;
 public class CropImageView extends View {
 
     //状态
-    private final int STATUS_Touch_SINGLE = 1;//单点
+    private final int STATUS_TOUCH_SINGLE = 1;//单点
     private final int STATUS_TOUCH_MULTI_START = 2;//多点开始
     private final int STATUS_TOUCH_MULTI_TOUCHING = 3;//多点拖拽中
 
@@ -39,7 +35,7 @@ public class CropImageView extends View {
     private FloatDrawable mFloatDrawable;//浮层
 
     private int mFloatRectSize;
-    private int mStatus = STATUS_Touch_SINGLE;
+    private int mStatus = STATUS_TOUCH_SINGLE;
 
     private int maskAreaColor;
 
@@ -93,11 +89,11 @@ public class CropImageView extends View {
             flag = 1;
         }
         if (mDrawableDst.top > mDrawableFloat.top) {
-            newLeft = mDrawableFloat.top;
+            newTop = mDrawableFloat.top;
             flag = 1;
         }
         if (mDrawableDst.bottom < mDrawableFloat.bottom) {
-            newLeft = -(mDrawableDst.height() - mDrawableFloat.bottom);
+            newTop = -(mDrawableDst.height() - mDrawableFloat.bottom);
             flag = 1;
         }
         if (flag != 0) {
@@ -185,7 +181,7 @@ public class CropImageView extends View {
     public boolean onTouchEvent(MotionEvent event) {
 
         if (event.getPointerCount() > 1) {
-            if (mStatus == STATUS_Touch_SINGLE) {
+            if (mStatus == STATUS_TOUCH_SINGLE) {
                 mStatus = STATUS_TOUCH_MULTI_START;
 
                 oldx_0 = event.getX(0);
@@ -208,7 +204,7 @@ public class CropImageView extends View {
                 oldY = event.getY();
             }
 
-            mStatus = STATUS_Touch_SINGLE;
+            mStatus = STATUS_TOUCH_SINGLE;
         }
 
 //Log.v("count currentTouch"+currentTouch, "-------");
@@ -276,7 +272,7 @@ public class CropImageView extends View {
 
                     oldx_1 = newx_1;
                     oldy_1 = newy_1;
-                } else if (mStatus == STATUS_Touch_SINGLE) {
+                } else if (mStatus == STATUS_TOUCH_SINGLE) {
                     int dx = (int) (event.getX() - oldX);
                     int dy = (int) (event.getY() - oldY);
 
