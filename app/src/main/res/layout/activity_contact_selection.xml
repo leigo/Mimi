@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:wumii="http://schemas.android.com/apk/res-auto">
+    <za.co.immedia.pinnedheaderlistview.PinnedHeaderListView android:id="@id/list_view" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/bottom_bar_height" android:listSelector="@android:color/transparent" android:cacheColorHint="@android:color/transparent" android:divider="@null" android:layout_toLeftOf="@id/quick_selection_bar" />
+    <com.wumii.android.view.QuickSelectionBar android:id="@id/quick_selection_bar" android:background="@drawable/quick_selection_bar_bg" android:clickable="true" android:layout_width="20.0dip" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="@dimen/bottom_bar_height" android:layout_alignParentRight="true" wumii:overlay_size="@dimen/quick_selection_overlay_size" />
+    <ViewStub android:id="@id/stub" android:layout="@layout/search_result_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/bottom_bar" />
+    <LinearLayout android:gravity="center_vertical" android:id="@id/bottom_bar" android:background="@drawable/bottom_bar_bg" android:layout_width="fill_parent" android:layout_height="@dimen/bottom_bar_height" android:layout_alignParentBottom="true">
+        <CheckBox android:id="@id/select_all" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:button="@drawable/check_box" android:onClick="clickOnSelectAll" />
+        <TextView android:textSize="18.0sp" android:textColor="@color/contact_selection_text" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/select_all" android:onClick="clickOnSelectAll" />
+        <TextView android:textColor="@color/num_selected_contacts" android:gravity="right" android:id="@id/num_selected_contacts" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="13.0dip" android:singleLine="true" android:layout_weight="1.0" />
+        <View android:background="@color/divider" android:layout_width="1.0px" android:layout_height="23.0dip" />
+        <TextView android:textSize="18.0sp" android:textColor="@color/green" android:gravity="center" android:clickable="true" android:layout_width="90.0dip" android:layout_height="fill_parent" android:text="@string/next_step" android:onClick="clickOnNextStep" />
+    </LinearLayout>
+</RelativeLayout>

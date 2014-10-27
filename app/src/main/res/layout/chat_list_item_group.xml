@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/item_background_holo_light" android:paddingLeft="10.0dip" android:longClickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/chat_list_item_secret_size" android:onClick="clickOnChat"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/chat_list_item_base" />
+    <ImageView android:id="@id/unread_count_red_dot" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="44.0dip" android:layout_marginTop="16.0dip" android:src="@drawable/ic_red_dot_small" android:contentDescription="@null" />
+</RelativeLayout>

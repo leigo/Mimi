@@ -1,26 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <RelativeLayout
-        android:id="@id/loading"
-        android:background="@android:color/white"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
-
-        <ProgressBar
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            style="?android:attr/progressBarStyle" />
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/loading" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" style="?android:attr/progressBarStyle" />
     </RelativeLayout>
-
-    <ImageView
-        android:id="@id/reload"
-        android:background="@android:color/white"
-        android:visibility="gone"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:src="@drawable/ic_reload"
-        android:scaleType="center"
-        android:contentDescription="@null" />
+    <ImageView android:id="@id/reload" android:background="@android:color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/ic_reload" android:scaleType="center" android:contentDescription="@null" />
 </merge>

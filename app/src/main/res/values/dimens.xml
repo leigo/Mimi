@@ -2,31 +2,49 @@
 <resources>
     <dimen name="single_button_height">47.0dip</dimen>
     <dimen name="single_button_text_size">17.0sp</dimen>
-    <dimen name="secret_info_item_height">48.0dip</dimen>
     <dimen name="common_edit_text_height">52.0dip</dimen>
     <dimen name="bottom_bar_height">48.0dip</dimen>
+    <dimen name="check_box_width">85.0dip</dimen>
+    <dimen name="bottom_pan_min_height">216.0dip</dimen>
+    <dimen name="secret_info_item_vertical_spacing">15.0dip</dimen>
+    <dimen name="to_top_guidance_indicator_padding_left">12.0dip</dimen>
+    <dimen name="action_bar_title_text_size">17.0dip</dimen>
+    <dimen name="action_bar_subtitle_text_size">13.0dip</dimen>
     <dimen name="xlist_view_footer_offset">55.0dip</dimen>
     <dimen name="xlist_view_pull_load_more_delta">50.0dip</dimen>
-    <dimen name="publish_bottom_pan_height">216.0dip</dimen>
     <dimen name="template_page_indicator_height">24.0dip</dimen>
     <dimen name="template_item_padding">7.0dip</dimen>
     <dimen name="comment_item_avatar_size">36.0dip</dimen>
     <dimen name="quick_selection_overlay_size">80.0dip</dimen>
     <dimen name="secret_information_text">16.0sp</dimen>
     <dimen name="secret_content_padding_bottom">20.0dip</dimen>
-    <dimen name="secret_information_item_spacing">4.0dip</dimen>
+    <dimen name="secret_info_item_horizontal_spacing">4.0dip</dimen>
     <dimen name="secret_icon_left_spacing">12.0dip</dimen>
     <dimen name="secret_reason_margin_left">10.0dip</dimen>
     <dimen name="secret_countdown_text">13.0sp</dimen>
-    <dimen name="chat_detail_item_avatar_size">46.0dip</dimen>
+    <dimen name="chat_group_avatar_size">90.0dip</dimen>
+    <dimen name="chat_detail_item_avatar_size">44.0dip</dimen>
+    <dimen name="chat_detail_item_horizontal_padding">12.0dip</dimen>
+    <dimen name="chat_detail_item_message_margin_space">56.0dip</dimen>
     <dimen name="chat_detail_item_image_message_min_size">45.0dip</dimen>
     <dimen name="chat_detail_item_image_message_max_size">135.0dip</dimen>
+    <dimen name="chat_bottom_avatar_size">45.0dip</dimen>
+    <dimen name="chat_morph_avatar_container_size">65.0dip</dimen>
+    <dimen name="chat_morph_avatar_size">60.0dip</dimen>
+    <dimen name="chat_morph_selected_size">25.0dip</dimen>
+    <dimen name="morph_countdown_text">12.0sp</dimen>
     <dimen name="transient_image_message_width">100.0dip</dimen>
     <dimen name="transient_image_message_height">100.0dip</dimen>
-    <dimen name="image_message_corner_size">14.0dip</dimen>
+    <dimen name="image_message_corner_size">10.0dip</dimen>
     <dimen name="image_message_padding_default">2.0dip</dimen>
     <dimen name="chat_list_item_height">72.0dip</dimen>
     <dimen name="chat_list_item_width">72.0dip</dimen>
     <dimen name="chat_list_item_avatar_size">46.0dip</dimen>
     <item type="dimen" name="chat_list_item_secret_size">@dimen/chat_list_item_height</item>
+    <dimen name="chat_system_message_item_avatar_size">16.0dip</dimen>
+    <item type="dimen" name="chat_secret_message_item_corner_radius">@dimen/image_message_corner_size</item>
+    <dimen name="chat_secret_message_item_title_height">36.0dip</dimen>
+    <dimen name="group_chat_info_icon_size">66.0dip</dimen>
+    <dimen name="chat_info_item_padding">14.0dip</dimen>
+    <dimen name="single_chat_info_group_chat_icon_size">56.0dip</dimen>
 </resources>

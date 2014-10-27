@@ -1,38 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:gravity="top"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="@dimen/xlist_view_footer_offset">
-
-        <TextView
-            android:textSize="16.0sp"
-            android:id="@id/xlist_view_footer_hint_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true" />
-
-        <ViewStub
-            android:id="@id/xlist_view_footer_arrow"
-            android:layout="@layout/xlist_view_footer_arrow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="-35.0dip"
-            android:layout_alignLeft="@id/xlist_view_footer_hint_textview"
-            android:layout_centerVertical="true" />
-
-        <ProgressBar
-            android:id="@id/xlist_view_footer_progressbar"
-            android:visibility="gone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="4.0dip"
-            android:layout_toLeftOf="@id/xlist_view_footer_hint_textview"
-            android:layout_centerVertical="true"
-            style="?android:attr/progressBarStyleSmall" />
+<LinearLayout android:gravity="top" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/xlist_view_footer_offset">
+        <TextView android:textSize="16.0sp" android:id="@id/xlist_view_footer_hint_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+        <ViewStub android:id="@id/xlist_view_footer_arrow" android:layout="@layout/xlist_view_footer_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="-35.0dip" android:layout_alignLeft="@id/xlist_view_footer_hint_textview" android:layout_centerVertical="true" />
+        <ProgressBar android:id="@id/xlist_view_footer_progressbar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:layout_toLeftOf="@id/xlist_view_footer_hint_textview" android:layout_centerVertical="true" style="?android:attr/progressBarStyleSmall" />
     </RelativeLayout>
 </LinearLayout>

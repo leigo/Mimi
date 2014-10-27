@@ -3,7 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:wumii="http://schemas.android.com/apk/res-auto">
 
     <com.leigo.android.view.XListView
         android:id="@id/list"
@@ -14,7 +14,7 @@
         android:listSelector="@android:color/transparent"
         android:cacheColorHint="@android:color/transparent"
         android:divider="@null"
-        app:hintTextColor="?xlist_view_hint_text" />
+        wumii:hintTextColor="?xlist_view_hint_text" />
 
     <TextView
         android:id="@id/empty"

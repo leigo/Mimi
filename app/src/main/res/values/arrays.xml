@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="image_operation">
+        <item>拍照</item>
+        <item>从手机相册选择</item>
+    </string-array>
     <string-array name="secret_operation">
         <item>分享</item>
         <item>@string/menu_remove</item>
@@ -28,6 +32,10 @@
         <item>AD</item>
         <item>ILLEGAL</item>
         <item>OTHER</item>
+    </string-array>
+    <string-array name="select_image_items">
+        <item>拍照</item>
+        <item>从手机相册选择</item>
     </string-array>
     <array name="templates_s">
         <item>@drawable/s_1</item>
@@ -77,89 +85,5 @@
         <item>大海</item>
         <item>街道</item>
         <item>校园</item>
-    </string-array>
-    <string-array name="filter_resource_inkwell">
-        <item>inkwell_map</item>
-    </string-array>
-    <string-array name="filter_resource_kelvin">
-        <item>kelvin_map</item>
-    </string-array>
-    <string-array name="filter_resource_nashville">
-        <item>nashville_map</item>
-    </string-array>
-    <string-array name="filter_resource_1977">
-        <item>map_1977</item>
-        <item>blowout_1977</item>
-    </string-array>
-    <string-array name="filter_resource_lomo">
-        <item>lomo_map</item>
-        <item>vignette_map</item>
-    </string-array>
-    <string-array name="filter_resource_valencia">
-        <item>valencia_map</item>
-        <item>valencia_gradient_map</item>
-    </string-array>
-    <string-array name="filter_resource_walden">
-        <item>walden_map</item>
-        <item>vignette_map</item>
-    </string-array>
-    <string-array name="filter_resource_xpro2">
-        <item>xpro_map</item>
-        <item>vignette_map</item>
-    </string-array>
-    <string-array name="filter_resource_rise">
-        <item>blackboard_1024</item>
-        <item>overlay_map</item>
-        <item>rise_map</item>
-    </string-array>
-    <string-array name="filter_resource_hudson">
-        <item>hudson_background</item>
-        <item>overlay_map</item>
-        <item>hudson_map</item>
-    </string-array>
-    <string-array name="filter_resource_amaro">
-        <item>blackboard_1024</item>
-        <item>overlay_map</item>
-        <item>amaro_map</item>
-    </string-array>
-    <string-array name="filter_resource_sierra">
-        <item>sierra_vignette</item>
-        <item>overlay_map</item>
-        <item>sierra_map</item>
-    </string-array>
-    <string-array name="filter_resource_earlybird">
-        <item>earlybird_curves</item>
-        <item>earlybird_overlay_map</item>
-        <item>vignette_map</item>
-        <item>earlybird_blowout</item>
-        <item>earlybird_map</item>
-    </string-array>
-    <string-array name="filter_resource_brannan">
-        <item>brannan_process</item>
-        <item>brannan_blowout</item>
-        <item>brannan_contrast</item>
-        <item>brannan_luma</item>
-        <item>brannan_screen</item>
-    </string-array>
-    <string-array name="filter_resource_toaster">
-        <item>toaster_metal</item>
-        <item>toaster_soft_light</item>
-        <item>toaster_curves</item>
-        <item>toaster_overlay_map_warm</item>
-        <item>toaster_color_shift</item>
-    </string-array>
-    <string-array name="filter_resource_hefe">
-        <item>edge_burn</item>
-        <item>hefe_map</item>
-        <item>hefe_gradient_map</item>
-        <item>hefe_soft_light</item>
-        <item>hefe_metal</item>
-    </string-array>
-    <string-array name="filter_resource_sutro">
-        <item>vignette_map</item>
-        <item>sutro_metal</item>
-        <item>soft_light</item>
-        <item>sutro_edge_burn</item>
-        <item>sutro_curves</item>
     </string-array>
 </resources>

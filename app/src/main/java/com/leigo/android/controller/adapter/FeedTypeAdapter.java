@@ -41,7 +41,7 @@ public class FeedTypeAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
-            convertView = inflater.inflate(R.layout.feed_type_drop_down_item, parent, false);
+            convertView = inflater.inflate(R.layout.drop_down_item, parent, false);
         }
         FeedType feedType = getItem(position);
         TextView textView = (TextView) convertView;

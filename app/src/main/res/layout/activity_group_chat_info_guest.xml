@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.wumii.android.view.GroupChatInfoHeader android:id="@id/header" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </ScrollView>
+    <include layout="@layout/horizontal_line_dip" />
+    <LinearLayout android:gravity="center" android:id="@id/join_container" android:layout_width="fill_parent" android:layout_height="44.0dip" android:onClick="clickOnJoin">
+        <TextView android:textSize="18.0sp" android:textColor="@color/join_group_chat_button_text" android:gravity="center_vertical" android:id="@id/join" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/join_group_chat" android:drawablePadding="4.0dip" />
+    </LinearLayout>
+</LinearLayout>

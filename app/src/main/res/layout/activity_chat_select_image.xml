@@ -1,45 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <ImageView
-        android:layout_gravity="center"
-        android:id="@id/image"
-        android:layout_width="wrap_content"
-        android:layout_height="0.0dip"
-        android:scaleType="centerInside"
-        android:layout_weight="1.0"
-        android:contentDescription="@null" />
-
-    <include layout="@layout/divider_view" />
-
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="@dimen/bottom_bar_height">
-
-        <CheckBox
-            android:id="@id/auto_remove"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5.0dip"
-            android:checked="true"
-            android:text="@string/checkbox_label_auto_remove"
-            android:layout_centerVertical="true" />
-
-        <Button
-            android:textSize="17.0sp"
-            android:textColor="@android:color/white"
-            android:background="@drawable/green_btn_bg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5.0dip"
-            android:layout_marginRight="10.0dip"
-            android:layout_marginBottom="5.0dip"
-            android:text="@string/button_text_send"
-            android:layout_alignParentRight="true"
-            android:onClick="clickOnSend" />
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center" android:id="@id/image" android:layout_width="wrap_content" android:layout_height="0.0dip" android:scaleType="centerInside" android:layout_weight="1.0" android:contentDescription="@null" />
+    <include layout="@layout/horizontal_line_dip" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/bottom_bar_height">
+        <CheckBox android:id="@id/auto_remove" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:checked="true" android:text="@string/checkbox_label_auto_remove" android:layout_centerVertical="true" />
+        <Button android:textSize="17.0sp" android:textColor="@android:color/white" android:background="@drawable/green_btn_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="5.0dip" android:text="@string/button_text_send" android:layout_alignParentRight="true" android:onClick="clickOnSend" />
     </RelativeLayout>
 </LinearLayout>

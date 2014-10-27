@@ -1,37 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-
-    <za.co.immedia.pinnedheaderlistview.PinnedHeaderListView
-        android:id="@id/region_list"
-        android:scrollbars="none"
-        android:fadingEdge="none"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:listSelector="@android:color/transparent"
-        android:cacheColorHint="@android:color/transparent"
-        android:divider="@null"
-        android:layout_toLeftOf="@id/quick_selection_bar"
-        android:layout_alignParentLeft="true" />
-
-    <com.leigo.android.view.QuickSelectionBar
-        android:id="@id/quick_selection_bar"
-        android:background="@drawable/quick_selection_bar_bg"
-        android:clickable="true"
-        android:layout_width="20.0dip"
-        android:layout_height="fill_parent"
-        android:layout_marginTop="10.0dip"
-        android:layout_marginRight="5.0dip"
-        android:layout_marginBottom="10.0dip"
-        android:layout_alignParentRight="true"
-        app:overlay_size="@dimen/quick_selection_overlay_size" />
-
-    <ViewStub
-        android:id="@id/stub"
-        android:layout="@layout/search_result_list"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent" />
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:wumii="http://schemas.android.com/apk/res-auto">
+    <za.co.immedia.pinnedheaderlistview.PinnedHeaderListView android:id="@id/region_list" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="@android:color/transparent" android:divider="@null" android:layout_toLeftOf="@id/quick_selection_bar" android:layout_alignParentLeft="true" />
+    <com.wumii.android.view.QuickSelectionBar android:id="@id/quick_selection_bar" android:background="@drawable/quick_selection_bar_bg" android:clickable="true" android:layout_width="20.0dip" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="10.0dip" android:layout_alignParentRight="true" wumii:overlay_size="@dimen/quick_selection_overlay_size" />
+    <ViewStub android:id="@id/stub" android:layout="@layout/search_result_list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
 </RelativeLayout>

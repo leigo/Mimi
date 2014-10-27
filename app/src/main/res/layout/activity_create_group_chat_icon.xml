@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/avatar" android:layout_width="@dimen/chat_group_avatar_size" android:layout_height="@dimen/chat_group_avatar_size" android:layout_marginTop="30.0dip" android:src="@drawable/ic_camera" android:layout_centerHorizontal="true" android:onClick="clickOnCamera" android:contentDescription="@null" />
+    <TextView android:textSize="18.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/create_group_chat_icon_hint" android:layout_below="@id/avatar" android:layout_centerHorizontal="true" />
+</RelativeLayout>

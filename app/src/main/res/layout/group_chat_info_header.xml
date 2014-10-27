@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wumii="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@id/avatar"
+        android:layout_width="@dimen/group_chat_info_icon_size"
+        android:layout_height="@dimen/group_chat_info_icon_size"
+        android:layout_marginTop="@dimen/chat_info_item_padding"
+        android:layout_marginBottom="@dimen/chat_info_item_padding"
+        android:src="@drawable/ic_default_avatar"
+        android:contentDescription="@null" />
+
+    <include layout="@layout/chat_info_divider" />
+
+    <com.leigo.android.view.ChatInfoItemTextView
+        android:id="@id/topic"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        wumii:title="@string/group_chat_info_item_topic"
+        wumii:titleTextColor="@color/group_chat_info_item_uneditable" />
+
+    <com.leigo.android.view.ChatInfoItemTextView
+        android:id="@id/member"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        wumii:title="@string/group_chat_info_item_member"
+        wumii:titleTextColor="@color/group_chat_info_item_uneditable" />
+
+    <com.leigo.android.view.ChatInfoItemTextView
+        android:id="@id/password"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        wumii:title="@string/group_chat_info_item_password"
+        wumii:titleTextColor="@color/group_chat_info_item_uneditable" />
+
+    <com.leigo.android.view.ChatInfoItemTextView
+        android:id="@id/description"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        wumii:title="@string/group_chat_info_item_description"
+        wumii:titleTextColor="@color/group_chat_info_item_uneditable" />
+</LinearLayout>

@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <style name="ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
         <item name="android:background">@drawable/ab_transparent_light_holo</item>
         <item name="android:titleTextStyle">@style/ActionBarTitleTextStyle</item>
+        <item name="android:subtitleTextStyle">@style/ActionBarSubTitleTextStyle</item>
         <item name="android:indeterminateProgressStyle">@style/ActionBarProgress</item>
     </style>
-
     <style name="ActionButton" parent="@android:style/Widget.Holo.Light.ActionButton">
         <item name="android:paddingLeft">8.0dip</item>
         <item name="android:paddingRight">8.0dip</item>
         <item name="android:minWidth">45.0dip</item>
     </style>
-
     <style name="ActionBarProgress" parent="@android:style/Widget.Holo.Light.ProgressBar">
         <item name="android:maxWidth">40.0dip</item>
         <item name="android:maxHeight">30.0dip</item>
@@ -20,7 +18,6 @@
         <item name="android:minWidth">40.0dip</item>
         <item name="android:minHeight">30.0dip</item>
     </style>
-
     <style name="WindowAnimation" parent="@android:style/Animation.Activity">
         <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
         <item name="android:activityOpenExitAnimation">@anim/zoom_out_center</item>
@@ -31,15 +28,17 @@
         <item name="android:taskCloseEnterAnimation">@anim/zoom_in_center</item>
         <item name="android:taskCloseExitAnimation">@anim/slide_out_right</item>
     </style>
-
     <style name="NoTitleActionBar" parent="@style/ActionBar">
         <item name="android:displayOptions">useLogo|showHome</item>
     </style>
-
     <style name="ActionBarTitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textSize">@dimen/action_bar_title_text_size</item>
         <item name="android:textColor">@color/action_bar_title</item>
     </style>
-
+    <style name="ActionBarSubTitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Subtitle">
+        <item name="android:textSize">@dimen/action_bar_subtitle_text_size</item>
+        <item name="android:textColor">@color/action_bar_sub_title</item>
+    </style>
     <style name="ShareButton">
         <item name="android:textSize">14.0sp</item>
         <item name="android:textColor">#ff464b50</item>
@@ -49,7 +48,6 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:drawablePadding">10.0dip</item>
     </style>
-
     <style name="BottomPanMainItem">
         <item name="android:textColor">@color/publish_bottom_pan_item_title</item>
         <item name="android:gravity">center_horizontal</item>
@@ -58,33 +56,27 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:drawablePadding">5.0dip</item>
     </style>
-
     <style name="PublishBottomPanMainItem" parent="@style/BottomPanMainItem" />
-
     <style name="ChatDetailBottomPanMainItem" parent="@style/BottomPanMainItem">
         <item name="android:paddingLeft">15.0dip</item>
         <item name="android:paddingRight">15.0dip</item>
     </style>
-
     <style name="PreferenceCheckbox" parent="@android:style/Widget.CompoundButton.CheckBox">
         <item name="android:button">@drawable/slide_check_box</item>
         <item name="android:width">85.0dip</item>
     </style>
-
     <style name="BaseTheme" parent="@android:style/Theme.Holo.Light">
         <item name="android:windowBackground">@android:color/white</item>
         <item name="android:windowAnimationStyle">@style/WindowAnimation</item>
         <item name="android:actionBarStyle">@style/ActionBar</item>
         <item name="android:actionButtonStyle">@style/ActionButton</item>
-        <item name="android:listChoiceBackgroundIndicator">@drawable/item_background_holo_light
-        </item>
+        <item name="android:listChoiceBackgroundIndicator">@drawable/item_background_holo_light</item>
+        <item name="android:actionMenuTextAppearance">@style/ActionBarTitleTextStyle</item>
         <item name="android:actionBarItemBackground">@drawable/item_background_holo_light</item>
     </style>
-
     <style name="NoTitleBaseTheme" parent="@style/BaseTheme">
         <item name="android:actionBarStyle">@style/NoTitleActionBar</item>
     </style>
-
     <style name="ProgressingDialog" parent="@android:style/Theme.Holo.Light.Dialog">
         <item name="android:windowBackground">@drawable/common_dialog_bg</item>
         <item name="android:windowNoTitle">true</item>
@@ -92,29 +84,23 @@
         <item name="android:backgroundDimEnabled">false</item>
         <item name="android:windowCloseOnTouchOutside">false</item>
     </style>
-
     <style name="NoActionBar" parent="@android:style/Theme.Holo.Light.NoActionBar">
         <item name="android:windowAnimationStyle">@style/WindowAnimation</item>
     </style>
-
     <style name="OverlayActionBar" parent="@style/BaseTheme">
         <item name="android:windowActionBarOverlay">true</item>
     </style>
-
     <style name="Fullscreen" parent="@android:style/Theme.Holo.NoActionBar.Fullscreen">
         <item name="android:windowAnimationStyle">@style/WindowAnimation</item>
     </style>
-
     <style name="XListViewTitledActivity" parent="@style/BaseTheme">
         <item name="xlist_view_hint_text">@color/xlist_view_hint_text</item>
         <item name="xlist_view_header_arrow">@drawable/xlist_view_header_arrow</item>
     </style>
-
     <style name="MainActivity" parent="@style/NoTitleBaseTheme">
         <item name="xlist_view_hint_text">@color/xlist_view_hint_text</item>
         <item name="xlist_view_header_arrow">@drawable/xlist_view_header_arrow</item>
     </style>
-
     <style name="DialogActivity" parent="@android:style/Theme.Holo.Light">
         <item name="android:windowBackground">@null</item>
         <item name="android:windowIsTranslucent">true</item>
@@ -123,8 +109,7 @@
         <item name="android:windowNoDisplay">true</item>
         <item name="android:windowDisablePreview">true</item>
     </style>
-
-    <style name="SettingsActivity" parent="@style/BaseTheme">
+    <style name="PreferenceActivity" parent="@style/BaseTheme">
         <item name="android:checkboxStyle">@style/PreferenceCheckbox</item>
     </style>
 </resources>

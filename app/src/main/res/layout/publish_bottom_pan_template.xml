@@ -1,37 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
-    android:id="@id/template_pager_layout"
-    android:background="@android:color/white"
-    android:layout_width="fill_parent"
-    android:layout_height="@dimen/publish_bottom_pan_height"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:vpi="http://schemas.android.com/apk/res-auto">
-
-    <android.support.v4.view.ViewPager
-        android:id="@id/pager"
-        android:layout_width="fill_parent"
-        android:layout_height="0.0dip"
-        android:layout_weight="1.0" />
-
-    <com.viewpagerindicator.IconPageIndicator
-        android:id="@id/indicator"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10.0dip"
-        vpi:vpiIconPageIndicatorIconPadding="3.0dip" />
-
-    <View
-        android:background="@color/divider"
-        android:layout_width="fill_parent"
-        android:layout_height="1.0px" />
-
-    <ImageView
-        android:id="@id/back"
-        android:background="@drawable/item_background_holo_light"
-        android:paddingLeft="10.0dip"
-        android:paddingRight="10.0dip"
-        android:layout_width="wrap_content"
-        android:layout_height="46.0dip"
-        android:src="@drawable/ic_publish_bottom_pan_back" />
+<LinearLayout android:orientation="vertical" android:id="@id/template_pager_layout" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="@dimen/bottom_pan_min_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vpi="http://schemas.android.com/apk/res-auto">
+    <android.support.v4.view.ViewPager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <com.viewpagerindicator.IconPageIndicator android:id="@id/indicator" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" vpi:vpiIconPageIndicatorIconPadding="3.0dip" />
+    <View android:background="@color/divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <ImageView android:id="@id/back" android:background="@drawable/item_background_holo_light" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="46.0dip" android:src="@drawable/ic_publish_bottom_pan_back" android:contentDescription="@null" />
 </LinearLayout>

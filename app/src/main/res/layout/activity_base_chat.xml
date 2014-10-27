@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ListView
+            android:id="@id/list_view"
+            android:fadingEdge="none"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:listSelector="@android:color/transparent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@null"
+            android:layout_weight="1.0" />
+
+        <include layout="@layout/horizontal_line_dip" />
+
+        <LinearLayout
+            android:gravity="bottom"
+            android:paddingBottom="3.0dip"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:paddingLeft="10.0dip"
+                android:paddingBottom="5.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_add"
+                android:onClick="clickOnMainBottomPan"
+                android:contentDescription="@null" />
+
+            <EditText
+                android:textSize="16.5sp"
+                android:textColor="@color/edit_box_content"
+                android:textColorHint="@color/edit_box_content_hint"
+                android:id="@id/edit_box"
+                android:background="@drawable/edit_text_holo_light"
+                android:padding="9.0dip"
+                android:scrollbars="vertical"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:maxLines="5"
+                android:layout_weight="1.0"
+                android:inputType="textMultiLine" />
+
+            <ImageView
+                android:id="@id/avatar"
+                android:background="@drawable/edit_text_subfield_holo_light"
+                android:padding="9.0dip"
+                android:visibility="gone"
+                android:layout_width="45.0dip"
+                android:layout_height="45.0dip"
+                android:src="@drawable/ic_default_avatar"
+                android:onClick="clickOnMorphPan"
+                android:contentDescription="@null" />
+
+            <ImageButton
+                android:id="@id/send"
+                android:background="@null"
+                android:layout_width="70.0dip"
+                android:layout_height="47.0dip"
+                android:layout_marginLeft="8.0dip"
+                android:src="@drawable/ic_send_btn"
+                android:onClick="clickOnSend"
+                android:contentDescription="@null" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ViewStub
+        android:id="@id/chat_unsupported_stub"
+        android:layout="@layout/chat_unsupported"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <ViewStub
+        android:id="@id/count_down_progress_stub"
+        android:layout="@layout/count_down_progress_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <ViewStub
+        android:id="@id/remark_guidance_stub"
+        android:layout="@layout/up_indicator_mask_guidance"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+</merge>

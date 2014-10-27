@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <com.leigo.android.view.IconPreference
+        android:title="@string/settings_title_chat_notification"
+        android:key="chat_notification_settings" />
+    <com.leigo.android.view.IconPreference
         android:title="@string/settings_title_blocked_user"
         android:key="blocked_user_settings" />
     <com.leigo.android.view.IconPreference
@@ -12,6 +15,9 @@
     <com.leigo.android.view.IconPreference
         android:title="@string/settings_title_privacy"
         android:key="privacy_settings" />
+    <com.leigo.android.view.CheckBoxPreference
+        android:title="@string/settings_title_nearby_secret"
+        android:key="nearby_secret_settings" />
     <com.leigo.android.view.IconPreference
         android:title="@string/settings_title_check_update"
         android:key="version_settings" />

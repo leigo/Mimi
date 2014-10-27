@@ -21,7 +21,7 @@ public class InviteActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
-        setContentView(R.layout.activity_invite_friend);
+        setContentView(R.layout.activity_invite);
         getActionBar().setDisplayHomeAsUpEnabled(true);
         shareContent = getString(R.string.invite_share_content);
     }

@@ -2,17 +2,22 @@
 <resources>
     <color name="divider">#ffe6e6e6</color>
     <color name="action_bar_title">#ff282d32</color>
+    <color name="action_bar_sub_title">#ff8c9196</color>
     <color name="default_template_info_item_text_color">#ff969696</color>
     <color name="mask_guidance_content">@color/action_bar_title</color>
     <color name="mask_guidance_bg">#cd000000</color>
     <color name="white_button_text">#ff282d32</color>
     <color name="green">#ff1abc9c</color>
+    <color name="hint_text">#ff757575</color>
     <color name="xlist_view_hint_text">#ff313131</color>
     <color name="seek_bar_thumb">#ff3ebd9d</color>
     <color name="seek_bar_progress_drawable_bg">#ffe5e5e5</color>
     <color name="seek_bar_progress_drawable_progress">@color/seek_bar_thumb</color>
     <color name="publish_bottom_pan_item_title">#ff7d7d82</color>
     <color name="publish_bottom_pan_item_title_disabled">#ffcacaca</color>
+    <color name="red_button_bg_normal">#fff95063</color>
+    <color name="red_button_bg_pressed">#ffe6465a</color>
+    <color name="red_button_bg_disabled">#fffb6e7e</color>
     <color name="quick_selection_bar_pressed">#2a787878</color>
     <color name="list_item_divider_bg">#33878787</color>
     <color name="action_bar_toast_bg">#cc1abc9c</color>
@@ -41,6 +46,10 @@
     <color name="sys_notification_item_info">#ffb4b4b4</color>
     <color name="num_selected_contacts">#ff6f7478</color>
     <color name="contact_selection_text">#ff343434</color>
+    <color name="chat_content_text">#ffb4b4b4</color>
+    <color name="group_chat_info_bg">#ffe6e6e6</color>
+    <color name="group_chat_info_text">#ff646464</color>
+    <color name="chat_item_image_divider">#19000000</color>
     <color name="chat_unsupported_bg">#b2ff9a03</color>
     <color name="chat_text_converser">#ff1f2326</color>
     <color name="chat_text_login_user">@android:color/white</color>
@@ -49,6 +58,7 @@
     <color name="image_countdown_text">@android:color/white</color>
     <color name="image_look_tips">#ffff6364</color>
     <color name="image_removed_tips">#ffbebebe</color>
+    <color name="group_chat_description_text">#ff969696</color>
     <color name="search_image_edit_bg">#fff0f0f0</color>
     <color name="search_image_item_bg">@color/search_image_edit_bg</color>
     <color name="hot_search_key_bg_pressed">#ff18937b</color>
@@ -57,4 +67,9 @@
     <color name="countdown_progress_bar_state_green">#ff4ac56e</color>
     <color name="countdown_progress_bar_state_red">#ffe8315b</color>
     <color name="invite_friend_text">#ff787878</color>
+    <color name="group_chat_info_item_title">@color/preference_title</color>
+    <color name="group_chat_info_item_uneditable">@color/preference_summary</color>
+    <color name="group_chat_info_item_editable">@color/group_chat_info_item_title</color>
+    <color name="join_group_chat_button_text">#ff3dbe9d</color>
+    <color name="chat_extra_message_text">@android:color/white</color>
 </resources>

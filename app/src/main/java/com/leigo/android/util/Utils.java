@@ -10,6 +10,7 @@ import android.os.Build;
 import android.os.IBinder;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
@@ -165,6 +166,10 @@ public class Utils {
         if (view != null && view.getVisibility() != visibility) {
             view.setVisibility(visibility);
         }
+    }
+
+    public static int dipToPixels(DisplayMetrics displayMetrics, float value) {
+        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, value, displayMetrics);
     }
 
     public static void disableOverScroll(View view) {

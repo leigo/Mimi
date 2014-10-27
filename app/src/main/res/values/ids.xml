@@ -4,10 +4,10 @@
     <item type="id" name="card_tag" />
     <item type="id" name="country_tag" />
     <item type="id" name="sys_notification_tag" />
-    <item type="id" name="allow_chat_tag" />
     <item type="id" name="image_search_tag" />
-    <item type="id" name="chat_holder_tag" />
+    <item type="id" name="holder_tag" />
     <item type="id" name="chat_preview_tag" />
+    <item type="id" name="group_chat_tag" />
     <item type="id" name="push_service" />
     <item type="id" name="notify_app_download" />
     <item type="id" name="view_pager">false</item>
@@ -23,17 +23,17 @@
     <item type="id" name="forgot_password">false</item>
     <item type="id" name="protocol_text">false</item>
     <item type="id" name="protocol_link">false</item>
-    <item type="id" name="current_password">false</item>
-    <item type="id" name="new_password">false</item>
-    <item type="id" name="new_password_confirmation">false</item>
-    <item type="id" name="list">false</item>
-    <item type="id" name="empty">false</item>
     <item type="id" name="container">false</item>
     <item type="id" name="list_view">false</item>
     <item type="id" name="edit_box">false</item>
+    <item type="id" name="avatar">false</item>
     <item type="id" name="send">false</item>
     <item type="id" name="chat_unsupported_stub">false</item>
     <item type="id" name="count_down_progress_stub">false</item>
+    <item type="id" name="remark_guidance_stub">false</item>
+    <item type="id" name="current_password">false</item>
+    <item type="id" name="new_password">false</item>
+    <item type="id" name="new_password_confirmation">false</item>
     <item type="id" name="image">false</item>
     <item type="id" name="countdown">false</item>
     <item type="id" name="curtain">false</item>
@@ -41,22 +41,40 @@
     <item type="id" name="tips">false</item>
     <item type="id" name="loading">false</item>
     <item type="id" name="reload">false</item>
+    <item type="id" name="list">false</item>
+    <item type="id" name="empty">false</item>
     <item type="id" name="auto_remove">false</item>
+    <item type="id" name="title">false</item>
     <item type="id" name="quick_selection_bar">false</item>
     <item type="id" name="stub">false</item>
     <item type="id" name="bottom_bar">false</item>
     <item type="id" name="select_all">false</item>
     <item type="id" name="num_selected_contacts">false</item>
+    <item type="id" name="hint">false</item>
+    <item type="id" name="password_title">false</item>
+    <item type="id" name="password_hint">false</item>
+    <item type="id" name="password_enable_check_box">false</item>
+    <item type="id" name="current_password_container">false</item>
+    <item type="id" name="current_password_title">false</item>
     <item type="id" name="crop_image">false</item>
     <item type="id" name="edit_box_contact">false</item>
     <item type="id" name="guidance_stub">false</item>
-    <item type="id" name="list_wrap">false</item>
+    <item type="id" name="header">false</item>
+    <item type="id" name="join_container">false</item>
+    <item type="id" name="join">false</item>
+    <item type="id" name="notify">false</item>
+    <item type="id" name="report">false</item>
+    <item type="id" name="check_box">false</item>
+    <item type="id" name="password_container">false</item>
+    <item type="id" name="empty_stub">false</item>
     <item type="id" name="friends_count">false</item>
+    <item type="id" name="invite_list">false</item>
     <item type="id" name="back_to_top_guidance_stub">false</item>
     <item type="id" name="action_bar_toast">false</item>
     <item type="id" name="scroll">false</item>
-    <item type="id" name="gpu_image">false</item>
+    <item type="id" name="bg_image">false</item>
     <item type="id" name="secret_content">false</item>
+    <item type="id" name="loading_filter_effect">false</item>
     <item type="id" name="operation_bar_image_left">false</item>
     <item type="id" name="operation_bar_image_right">false</item>
     <item type="id" name="region_list">false</item>
@@ -66,6 +84,13 @@
     <item type="id" name="repeat_new_password">false</item>
     <item type="id" name="search_view">false</item>
     <item type="id" name="hot_search_keys">false</item>
+    <item type="id" name="from">false</item>
+    <item type="id" name="secret_image">false</item>
+    <item type="id" name="group_chat_icon">false</item>
+    <item type="id" name="remark">false</item>
+    <item type="id" name="block_other">false</item>
+    <item type="id" name="block_all">false</item>
+    <item type="id" name="tip">false</item>
     <item type="id" name="sms_invitation_content">false</item>
     <item type="id" name="sms_invitation_sign">false</item>
     <item type="id" name="notification_list">false</item>
@@ -80,7 +105,7 @@
     <item type="id" name="progress">false</item>
     <item type="id" name="secret_countdown_text">false</item>
     <item type="id" name="divider">false</item>
-    <item type="id" name="reason">false</item>
+    <item type="id" name="source">false</item>
     <item type="id" name="comment">false</item>
     <item type="id" name="chat">false</item>
     <item type="id" name="comment_count">false</item>
@@ -90,45 +115,59 @@
     <item type="id" name="unlock">false</item>
     <item type="id" name="camera">false</item>
     <item type="id" name="album">false</item>
+    <item type="id" name="morph">false</item>
+    <item type="id" name="morph_countdown_text">false</item>
+    <item type="id" name="source_avatar">false</item>
+    <item type="id" name="source_avatar_selected">false</item>
+    <item type="id" name="dest_avatar">false</item>
+    <item type="id" name="dest_avatar_selected">false</item>
     <item type="id" name="chat_count">false</item>
-    <item type="id" name="avatar">false</item>
+    <item type="id" name="time">false</item>
     <item type="id" name="content_container">false</item>
+    <item type="id" name="content_container_mirror">false</item>
     <item type="id" name="sending">false</item>
     <item type="id" name="failed">false</item>
+    <item type="id" name="secret_title">false</item>
+    <item type="id" name="kicked_user_avatar">false</item>
+    <item type="id" name="user_avatar">false</item>
     <item type="id" name="message_content">false</item>
     <item type="id" name="unread_count">false</item>
-    <item type="id" name="secret_image">false</item>
-    <item type="id" name="chat_content">false</item>
+    <item type="id" name="image_content">false</item>
+    <item type="id" name="content_layout">false</item>
+    <item type="id" name="last_message">false</item>
+    <item type="id" name="unread_count_red_dot">false</item>
     <item type="id" name="countdown_progress">false</item>
     <item type="id" name="chat_unsupported">false</item>
     <item type="id" name="comment_status">false</item>
     <item type="id" name="comment_info">false</item>
     <item type="id" name="line">false</item>
-    <item type="id" name="header">false</item>
     <item type="id" name="selection">false</item>
     <item type="id" name="name">false</item>
     <item type="id" name="feed_type_name">false</item>
-    <item type="id" name="filter_image">false</item>
-    <item type="id" name="filter_name">false</item>
     <item type="id" name="root">false</item>
     <item type="id" name="albums">false</item>
     <item type="id" name="grid">false</item>
-    <item type="id" name="title">false</item>
     <item type="id" name="no_images">false</item>
     <item type="id" name="no_pictures_image">false</item>
+    <item type="id" name="topic">false</item>
+    <item type="id" name="member">false</item>
+    <item type="id" name="description">false</item>
+    <item type="id" name="lock">false</item>
+    <item type="id" name="bottom_line">false</item>
+    <item type="id" name="empty_hint">false</item>
     <item type="id" name="hot_search_key">false</item>
     <item type="id" name="icon">false</item>
+    <item type="id" name="indicator_icon">false</item>
+    <item type="id" name="indicator_content">false</item>
     <item type="id" name="notification">false</item>
     <item type="id" name="notification_count">false</item>
     <item type="id" name="num_new_comment">false</item>
     <item type="id" name="num_new_like">false</item>
     <item type="id" name="left_notification">false</item>
     <item type="id" name="right_notification">false</item>
+    <item type="id" name="passcode">false</item>
     <item type="id" name="progressing_text">false</item>
     <item type="id" name="back">false</item>
-    <item type="id" name="filter">false</item>
-    <item type="id" name="seek">false</item>
-    <item type="id" name="h_list_view">false</item>
     <item type="id" name="blur">false</item>
     <item type="id" name="brightness">false</item>
     <item type="id" name="search">false</item>
@@ -140,11 +179,11 @@
     <item type="id" name="template_pager_layout">false</item>
     <item type="id" name="pager">false</item>
     <item type="id" name="code">false</item>
+    <item type="id" name="new_remark">false</item>
     <item type="id" name="grid_view">false</item>
     <item type="id" name="progress_bar">false</item>
     <item type="id" name="card_secret">false</item>
     <item type="id" name="foreground">false</item>
-    <item type="id" name="empty_hint">false</item>
     <item type="id" name="loading_comments">false</item>
     <item type="id" name="reload_comments">false</item>
     <item type="id" name="share_weixin">false</item>
@@ -154,6 +193,7 @@
     <item type="id" name="share_qzone">false</item>
     <item type="id" name="share_renren">false</item>
     <item type="id" name="share_sms">false</item>
+    <item type="id" name="share_chat">false</item>
     <item type="id" name="share_system">false</item>
     <item type="id" name="loading_text">false</item>
     <item type="id" name="read_state">false</item>
@@ -169,9 +209,15 @@
     <item type="id" name="xlist_view_header_time">false</item>
     <item type="id" name="xlist_view_header_arrow">false</item>
     <item type="id" name="xlist_view_header_progressbar">false</item>
-    <item type="id" name="action_info">false</item>
     <item type="id" name="action_more">false</item>
+    <item type="id" name="action_save">false</item>
+    <item type="id" name="action_chat_options">false</item>
+    <item type="id" name="action_join_group">false</item>
+    <item type="id" name="action_add_group">false</item>
+    <item type="id" name="action_my_group">false</item>
+    <item type="id" name="next_step">false</item>
     <item type="id" name="action_send_feedback">false</item>
+    <item type="id" name="action_info">false</item>
     <item type="id" name="action_new_secret">false</item>
     <item type="id" name="action_notification">false</item>
     <item type="id" name="action_chat">false</item>
@@ -179,7 +225,6 @@
     <item type="id" name="action_feedback">false</item>
     <item type="id" name="action_settings">false</item>
     <item type="id" name="action_publish_secret">false</item>
-    <item type="id" name="action_like_secret">false</item>
     <item type="id" name="action_share">false</item>
     <item type="id" name="action_subscribe">false</item>
     <item type="id" name="action_remove">false</item>

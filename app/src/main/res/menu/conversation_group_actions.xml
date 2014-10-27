@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="@string/menu_group_chat"
+        android:showAsAction="always">
+        <menu>
+            <item
+                android:id="@id/action_join_group"
+                android:title="@string/menu_join_group_chat" />
+            <item
+                android:id="@id/action_add_group"
+                android:title="@string/menu_create_group_chat" />
+            <item
+                android:id="@id/action_my_group"
+                android:title="@string/menu_my_group_chat" />
+        </menu>
+    </item>
+</menu>

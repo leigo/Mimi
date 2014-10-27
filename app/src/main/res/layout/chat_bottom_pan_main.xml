@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/bottom_pan_min_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/horizontal_line_dip" />
+    <TableLayout android:orientation="vertical" android:paddingLeft="10.0dip" android:paddingTop="20.0dip" android:paddingRight="10.0dip" android:paddingBottom="20.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/bottom_pan_min_height">
+        <TableRow>
+            <TextView android:id="@id/camera" android:text="@string/publish_bottom_pan_camera" android:drawableTop="@drawable/ic_publish_bottom_pan_camera" android:onClick="clickOnCamera" style="@style/ChatDetailBottomPanMainItem" />
+            <TextView android:id="@id/album" android:text="@string/publish_bottom_pan_album" android:drawableTop="@drawable/ic_publish_bottom_pan_album" android:onClick="clickOnAlbum" style="@style/ChatDetailBottomPanMainItem" />
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>

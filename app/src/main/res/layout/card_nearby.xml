@@ -1,40 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    android:background="@drawable/ic_guidance_small_nearby_bg"
-    android:paddingBottom="40.0dip"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <ImageButton
-        android:background="@null"
-        android:padding="10.0dip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_close"
-        android:layout_alignParentRight="true"
-        android:onClick="clickOnCloseNearbyCard" />
-
-    <TextView
-        android:textSize="26.0sp"
-        android:textColor="@android:color/white"
-        android:gravity="center_horizontal"
-        android:id="@id/content"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/card_nearby_not_enabled_content"
-        android:layout_centerInParent="true" />
-
-    <Button
-        android:textColor="@android:color/white"
-        android:background="@drawable/green_btn_bg"
-        android:paddingLeft="20.0dip"
-        android:paddingRight="20.0dip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minHeight="48.0dip"
-        android:text="@string/card_nearby_not_enabled_button_enable"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="clickOnEnableNearby" />
+<RelativeLayout android:background="@drawable/ic_guidance_small_nearby_bg" android:paddingBottom="40.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton android:background="@null" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_close" android:layout_alignParentRight="true" android:onClick="clickOnCloseNearbyCard" android:contentDescription="@null" />
+    <TextView android:textSize="26.0sp" android:textColor="@android:color/white" android:gravity="center_horizontal" android:id="@id/content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/card_nearby_not_enabled_content" android:layout_centerInParent="true" />
+    <Button android:textColor="@android:color/white" android:background="@drawable/green_btn_bg" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48.0dip" android:text="@string/card_nearby_not_enabled_button_enable" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:onClick="clickOnEnableNearby" />
 </RelativeLayout>

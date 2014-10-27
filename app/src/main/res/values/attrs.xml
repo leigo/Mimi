@@ -28,4 +28,17 @@
     <attr name="grid_paddingRight" format="dimension" />
     <attr name="grid_paddingTop" format="dimension" />
     <attr name="grid_paddingBottom" format="dimension" />
+
+    <declare-styleable name="ChatInfoItemTextView">
+        <attr name="title" format="reference|string" />
+        <attr name="titleTextColor" format="color" />
+        <attr name="background" format="reference" />
+        <attr name="summaryTextColor" format="color" />
+        <attr name="checkBoxTitle" format="reference|string" />
+        <attr name="summaryPosition">
+            <enum name="center" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+
 </resources>

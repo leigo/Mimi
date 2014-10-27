@@ -1,12 +1,3 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.wumii.android.view.CountDownProgressBar
-    android:id="@id/progress"
-    android:visibility="gone"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:maxHeight="2.0dip"
-    android:progressDrawable="@drawable/progress_bar_state_green"
-    android:minHeight="2.0dip"
-    android:layout_alignParentBottom="true"
-    style="?android:attr/progressBarStyleHorizontal"
-    xmlns:android="http://schemas.android.com/apk/res/android" />
+<com.wumii.android.view.CountDownProgressBar android:id="@id/progress" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="2.0dip" android:progressDrawable="@drawable/progress_bar_state_green" android:minHeight="2.0dip" android:layout_alignParentBottom="true" style="?android:attr/progressBarStyleHorizontal"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

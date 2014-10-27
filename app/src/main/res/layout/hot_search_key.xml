@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textColor="@android:color/white" android:gravity="center" android:id="@id/hot_search_key" android:background="@drawable/hot_search_key_bg" android:padding="10.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:onClick="clickOnHotSearchKey"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

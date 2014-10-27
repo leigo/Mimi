@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:onClick="clickOnGroup"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/image" android:layout_width="@dimen/chat_list_item_avatar_size" android:layout_height="@dimen/chat_list_item_avatar_size" android:layout_margin="10.0dip" android:contentDescription="@null" />
+    <TextView android:textSize="17.0sp" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="1.0dip" android:singleLine="true" android:layout_toRightOf="@id/image" android:layout_alignTop="@id/image" />
+    <ImageView android:id="@id/lock" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="5.0dip" android:src="@drawable/ic_group_chat_lock" android:layout_toRightOf="@id/name" android:layout_alignTop="@id/image" android:contentDescription="@null" />
+    <TextView android:textSize="14.0sp" android:textColor="@color/group_chat_description_text" android:id="@id/description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:singleLine="true" android:layout_toRightOf="@id/image" android:layout_below="@id/name" />
+    <View android:id="@id/line" android:background="@color/divider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/image" android:layout_alignLeft="@id/name" />
+    <View android:id="@id/bottom_line" android:background="@color/divider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="10.0dip" android:layout_below="@id/image" />
+</RelativeLayout>

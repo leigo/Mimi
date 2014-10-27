@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
@@ -30,6 +31,8 @@ import com.loopj.android.http.RequestParams;
 import com.loopj.android.http.TextHttpResponseHandler;
 
 import org.apache.http.Header;
+
+import java.util.ArrayList;
 
 
 public class MainActivity extends Activity {
@@ -48,14 +51,19 @@ public class MainActivity extends Activity {
     private FeedType lastFeedType;
 
     private XListView listView;
+    private ArrayAdapter<String> mAdapter;
+    private ArrayList<String> items = new ArrayList<String>();
+    private Handler mHandler;
+    private int start = 0;
+    private static int refreshCnt = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        boolean isAuthentication = false;
-//        if (!isAuthentication) {
-//            AccountGuidanceActivity.startFrom(this);
-//        }
+        boolean isAuthentication = false;
+        if (!isAuthentication) {
+            AccountGuidanceActivity.startFrom(this);
+        }
         displayMetrics = getResources().getDisplayMetrics();
 
         setContentView(R.layout.activity_main);
@@ -71,6 +79,11 @@ public class MainActivity extends Activity {
 
         listView = (XListView) findViewById(R.id.list_view);
         listView.enablePullRefresh(false);
+
+        listView.setAdapter(mAdapter);
+//		mListView.setPullLoadEnable(false);
+//		mListView.setPullRefreshEnable(false);
+        mHandler = new Handler();
 
 //        AsyncHttpClient client = new AsyncHttpClient();
 //        RequestParams params = new RequestParams();
@@ -130,7 +143,7 @@ public class MainActivity extends Activity {
                     public void run() {
                         feedTypePopup.dismiss();
                     }
-                }, 50L);
+                }, 50);
             }
         });
         feedTypePopup = new PopupWindow(listView, displayMetrics.widthPixels / 3, -2, true);
@@ -202,4 +215,11 @@ public class MainActivity extends Activity {
     public void onBackPressed() {
         super.onBackPressed();
     }
+
+    private void geneItems() {
+        for (int i = 0; i != 20; ++i) {
+            items.add("refresh cnt " + (++start));
+        }
+    }
+
 }

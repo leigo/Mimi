@@ -1,63 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    android:background="@android:color/white"
-    android:paddingLeft="10.0dip"
-    android:paddingRight="10.0dip"
-    android:layout_width="fill_parent"
-    android:layout_height="@dimen/publish_bottom_pan_height"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <TextView
-        android:textSize="16.0sp"
-        android:gravity="center_vertical"
-        android:id="@id/auto_remove"
-        android:layout_width="wrap_content"
-        android:layout_height="65.0dip"
-        android:text="@string/publish_secret_option_page_item_auto_remove" />
-
-    <CheckBox
-        android:id="@id/auto_remove_check_box"
-        android:background="@null"
-        android:layout_width="85.0dip"
-        android:layout_height="wrap_content"
-        android:checked="false"
-        android:button="@drawable/slide_check_box"
-        android:layout_alignTop="@id/auto_remove"
-        android:layout_alignBottom="@id/auto_remove"
-        android:layout_alignParentRight="true"
-        android:onClick="clickOnAutoRemove" />
-
-    <include
-        android:id="@id/line"
-        android:layout_width="fill_parent"
-        android:layout_height="1.0px"
-        android:layout_below="@id/auto_remove"
-        layout="@layout/divider_view" />
-
-    <TextView
-        android:textSize="16.0sp"
-        android:gravity="center_vertical"
-        android:id="@id/allow_chat"
-        android:layout_width="wrap_content"
-        android:layout_height="65.0dip"
-        android:text="@string/publish_secret_option_page_item_allow_chat"
-        android:layout_below="@id/line" />
-
-    <CheckBox
-        android:id="@id/allow_chat_check_box"
-        android:background="@null"
-        android:layout_width="85.0dip"
-        android:layout_height="wrap_content"
-        android:checked="true"
-        android:button="@drawable/slide_check_box"
-        android:layout_alignTop="@id/allow_chat"
-        android:layout_alignBottom="@id/allow_chat"
-        android:layout_alignParentRight="true"
-        android:onClick="clickOnAllowChat" />
-
-    <include
-        android:layout_width="fill_parent"
-        android:layout_height="1.0px"
-        android:layout_below="@id/allow_chat"
-        layout="@layout/divider_view" />
+<RelativeLayout android:background="@android:color/white" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/bottom_pan_min_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:gravity="center_vertical" android:id="@id/auto_remove" android:layout_width="wrap_content" android:layout_height="65.0dip" android:text="@string/publish_secret_option_page_item_auto_remove" />
+    <CheckBox android:id="@id/auto_remove_check_box" android:background="@null" android:layout_width="@dimen/check_box_width" android:layout_height="wrap_content" android:checked="false" android:button="@drawable/slide_check_box" android:layout_alignTop="@id/auto_remove" android:layout_alignBottom="@id/auto_remove" android:layout_alignParentRight="true" android:onClick="clickOnAutoRemove" />
+    <include android:id="@id/line" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/auto_remove" layout="@layout/horizontal_line_dip" />
+    <TextView android:textSize="16.0sp" android:gravity="center_vertical" android:id="@id/allow_chat" android:layout_width="wrap_content" android:layout_height="65.0dip" android:text="@string/publish_secret_option_page_item_allow_chat" android:layout_below="@id/line" />
+    <CheckBox android:id="@id/allow_chat_check_box" android:background="@null" android:layout_width="@dimen/check_box_width" android:layout_height="wrap_content" android:checked="true" android:button="@drawable/slide_check_box" android:layout_alignTop="@id/allow_chat" android:layout_alignBottom="@id/allow_chat" android:layout_alignParentRight="true" android:onClick="clickOnAllowChat" />
+    <include android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/allow_chat" layout="@layout/horizontal_line_dip" />
 </RelativeLayout>
