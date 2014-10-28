@@ -52,6 +52,7 @@ public class SettingsActivity extends PreferenceActivity implements Preference.O
         versionPreference = (IconPreference) findPreference(KEY_VERSION_SETTINGS);
         try {
             PackageInfo packageInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
+            versionPreference.setSummary(getString(R.string.settings_version_current, packageInfo.versionName));
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }

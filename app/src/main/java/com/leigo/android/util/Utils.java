@@ -1,15 +1,12 @@
 package com.leigo.android.util;
 
+import android.app.ActivityManager;
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Matrix;
 import android.graphics.Rect;
-import android.media.ExifInterface;
 import android.os.Build;
 import android.os.IBinder;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.MenuItem;
@@ -23,11 +20,13 @@ import com.leigo.android.mimi.R;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 
-import java.io.IOException;
 import java.lang.reflect.Method;
+import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 /**
@@ -36,6 +35,7 @@ import java.util.Locale;
 public class Utils {
     private static final String DEFAULT_TEMPLATE_URL_SUFFIX = "/resources/background/1.jpg";
     private static final String DRAWABLE_URI_SCHEME = "drawable://";
+    private static final String FILE_URI_SCHEME = "file://";
 
     private static final long ONE_DAY = 24 * 60 * 60 * 1000;
     private static final long ONE_HOUR = 60 * 60 * 1000;
@@ -44,11 +44,15 @@ public class Utils {
     private static final long ONE_SECOND = 1000;
     private static final long ONE_YEAR = 12 * 30 * 24 * 60 * 60 * 1000;
 
+    private static final float SECRET_CONTENT_PADDING_RATIO = 0.1125F;
+
     private static final Logger logger = new Logger(Utils.class);
+
+    private static NumberFormat numberFormat;
     private static StringBuilder reusableBuilder;
 
     public static boolean beforeYesterday(long milliseconds) {
-        return System.currentTimeMillis() - milliseconds > 24 * 60 * 60 * 1000;
+        return System.currentTimeMillis() - milliseconds > ONE_DAY;
     }
 
     public static String calcDisplayTime(Date date) {
@@ -85,74 +89,6 @@ public class Utils {
         return str;
     }
 
-    private static Bitmap decodeFile(String pathName) {
-        BitmapFactory.Options opts = new BitmapFactory.Options();
-        opts.inJustDecodeBounds = true;
-        BitmapFactory.decodeFile(pathName, opts);
-        opts.inSampleSize = sampleSize(opts, opts.outWidth, opts.outHeight);
-        opts.inJustDecodeBounds = false;
-        opts.inDither = false;
-        return rotateBitmap(BitmapFactory.decodeFile(pathName, opts), getExifOrientation(pathName));
-    }
-
-    public static Bitmap decodeFile(String imagePath, DisplayMetrics displayMetrics) {
-        return null;
-    }
-
-    // Rotates the bitmap by the specified degree.
-    // If a new bitmap is created, the original bitmap is recycled.
-    public static Bitmap rotateBitmap(Bitmap b, int degrees) {
-        if (degrees != 0 && b != null) {
-            Matrix m = new Matrix();
-            m.setRotate(degrees,
-                    (float) b.getWidth() / 2, (float) b.getHeight() / 2);
-            try {
-                Bitmap b2 = Bitmap.createBitmap(
-                        b, 0, 0, b.getWidth(), b.getHeight(), m, true);
-                if (b != b2) {
-                    b.recycle();
-                    b = b2;
-                }
-            } catch (OutOfMemoryError ex) {
-                // We have no memory to rotate. Return the original bitmap.
-            }
-        }
-        return b;
-    }
-
-    public static int sampleSize(BitmapFactory.Options opts, int width, int height) {
-        int w = opts.outWidth;
-        int h = opts.outHeight;
-        int k = 1;
-        int m = Math.min(width, 720);
-        int n = Math.min(height, 720);
-        if (w > m || h > n) {
-            int ww = w / 2;
-            int hh = h / 2;
-            while (ww / k > m && hh / k > n) {
-                k *= 2;
-            }
-        }
-        return k;
-    }
-
-
-    public static String getDrawableUriFromResId(int resId) {
-        return DRAWABLE_URI_SCHEME + resId;
-    }
-
-    private static int getExifOrientation(String filename) {
-        ExifInterface exif;
-        int orientation = -1;
-        try {
-            exif = new ExifInterface(filename);
-            orientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL);
-        } catch (IOException e) {
-            logger.e("cannot read exif", e);
-            e.printStackTrace();
-        }
-        return orientation;
-    }
 
     public static boolean isDefaultSecretTemplate(String template) {
         return template.endsWith(DEFAULT_TEMPLATE_URL_SUFFIX);
@@ -160,6 +96,26 @@ public class Utils {
 
     public static void hideSoftKeyboard(InputMethodManager inputMethodManager, IBinder token) {
         inputMethodManager.hideSoftInputFromInputMethod(token, 0);
+    }
+
+    public static boolean isAppRunning(Context context) {
+        ActivityManager.RunningTaskInfo runningTaskInfo = getRunningTaskInfo(context);
+        if (runningTaskInfo == null) {
+            return false;
+        }
+        return context.getPackageName().equals(runningTaskInfo.topActivity.getPackageName());
+    }
+
+    public static ActivityManager.RunningTaskInfo getRunningTaskInfo(Context context) {
+        List<ActivityManager.RunningTaskInfo> runningTasks = ((ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE)).getRunningTasks(1);
+        if (isEmpty(runningTasks)) {
+            return null;
+        }
+        return runningTasks.get(0);
+    }
+
+    public static <E> boolean isEmpty(Collection<E> collection) {
+        return (collection == null) || (collection.isEmpty());
     }
 
     public static void setVisibility(View view, int visibility) {
@@ -186,7 +142,6 @@ public class Utils {
                 logger.w("Error when call 'setOverScrollMode(int)' on the " + view.getClass().getName(), localException);
             }
         }
-
     }
 
     public static DisplayImageOptions getAvatarDisplayImageOptions(int cornerRadiusPixels) {
@@ -199,6 +154,10 @@ public class Utils {
                 .bitmapConfig(Bitmap.Config.RGB_565)
                 .displayer(new RoundedBitmapDisplayer(cornerRadiusPixels))
                 .build();
+    }
+
+    public static String getDrawableUriFromResId(int resId) {
+        return "drawable://" + resId;
     }
 
     public static String getFormattedDate(String template, Date date) {

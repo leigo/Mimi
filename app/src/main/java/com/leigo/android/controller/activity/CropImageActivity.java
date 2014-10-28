@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.leigo.android.mimi.R;
 import com.leigo.android.model.helper.FileHelper;
 import com.leigo.android.util.ContextToast;
+import com.leigo.android.util.ImageUtils;
 import com.leigo.android.util.Utils;
 import com.leigo.android.view.CropImageView;
 import com.leigo.android.view.ProgressingDialog;
@@ -66,7 +67,7 @@ public class CropImageActivity extends Activity {
     private void progressImageTask() {
         ProgressingDialog progressDialog = new ProgressingDialog(this);
         progressDialog.show();
-        Bitmap bitmap = Utils.decodeFile(imagePath, displayMetrics);
+        Bitmap bitmap = ImageUtils.decodeFile(imagePath);
         if (bitmap == null) {
             ContextToast.show(this, R.string.toast_image_data_invalid, Toast.LENGTH_SHORT);
             CropImageActivity.this.finish();
